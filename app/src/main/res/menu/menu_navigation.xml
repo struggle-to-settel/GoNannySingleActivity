@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:checkableBehavior="single">
+
+    <group android:id="@+id/groupOne">
+        <item
+            android:id="@+id/menuHome"
+            android:icon="@drawable/ic_home"
+            android:title="@string/home" />
+    </group>
+    <group android:id="@+id/groupTwo">
+        <item
+            android:id="@+id/menuBooking"
+            android:icon="@drawable/ic_bookings"
+            android:title="@string/bookings" />
+    </group>
+    <group android:id="@+id/groupThree">
+        <item
+            android:id="@+id/menuSetting"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/settings" />
+    </group>
+    <group android:id="@+id/groupFour">
+        <item
+            android:id="@+id/menuNotification"
+            android:icon="@drawable/ic_notifications"
+            android:title="@string/notifications" />
+    </group>
+    <group android:id="@+id/groupFive">
+        <item
+            android:id="@+id/menuLogOut"
+            android:icon="@drawable/ic_logout"
+            android:title="@string/log_out" />
+    </group>
+    <group
+        android:id="@+id/groupSix"
+        android:enabled="false">
+        <item
+            android:id="@+id/menuBlank"
+            android:checkable="false"
+            android:title="" />
+    </group>
+
+
+</menu>

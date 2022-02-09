@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="defaultRed">#EF476F</color>
+    <color name="defaultRedLight">#FF6388</color>
+    <color name="googleRed">#EA4335</color>
+    <color name="facebookBlue">#3B5998</color>
+    <color name="appBackgroundColor">#FEFAF3</color>
+    <color name="oftenTextColors">#073B4C</color>
+    <color name="oftenTextColorsTwo">#415B64</color>
+    <color name="btnGreen">#06D6A0</color>
+    <color name="verticalBar">#E8E3D9</color>
+    <color name="defaultScreenColor">#FAFAFA</color>
+    <color name="textViewBackground">#FEFAF3</color>
+    <color name="backgroundColorHomeActivity">#FEFAF3</color>
+    <color name="yellowIconColor">#FDBF00</color>
+    <color name="stroke_color">#E8E3D9</color>
+    <color name="skyBlue">#20A7D4</color>
+    <color name="darkBlue">#0F5167</color>
+
+    <color name="red_color_one">#EF476F</color>
+    <color name="red_color_two">#FF6388</color>
+
+    <color name="green_color_one">#00CB96</color>
+    <color name="green_color_two">#06D6A0</color>
+
+    <color name="blue_color_one">#073B4C</color>
+    <color name="blue_color_two">#0F5167</color>
+
+    <color name="sky_color_one">#118AB2</color>
+    <color name="sky_color_two">#20A7D4</color>
+
+    <color name="yellow_color_one">#FFD166</color>
+    <color name="yellow_color_two">#FFD87D</color>
+
+    <color name="pinkColor">#FFADAD</color>
+    <color name="orangeColor">#FFD6A5</color>
+    <color name="yellowColorImg">#FDFFB6</color>
+    <color name="greenColorImg">#CAFFBF</color>
+    <color name="blueColor">#A0C4FF</color>
+    <color name="purpleColor">#FFC6FF</color>
+    <color name="time_remaining_color_booking">#B8EEFD</color>
+
+</resources>

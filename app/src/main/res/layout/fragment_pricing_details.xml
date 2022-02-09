@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/appBackgroundColor">
+
+        <include
+            android:id="@+id/includedToolbar"
+            layout="@layout/common_toolbar" />
+
+        <View
+            android:id="@+id/topView"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/includedToolbar" />
+
+        <TextView
+            style="@style/textViewApp"
+            android:layout_marginTop="10dp"
+            android:text="@string/your_request"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@id/includedToolbar" />
+
+        <TextView
+            android:id="@+id/tvEdit"
+            style="@style/textViewApp"
+            android:layout_marginTop="6dp"
+            android:paddingVertical="4dp"
+            android:paddingHorizontal="16dp"
+            android:fontFamily="@font/proxima_nova_semi_bold"
+            android:text="@string/edit"
+            android:textAllCaps="true"
+            android:textColor="@color/defaultRed"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/includedToolbar" />
+
+        <TextView
+            android:id="@+id/tvNeededDateTime"
+            style="@style/textViewApp"
+            android:layout_marginTop="20dp"
+            android:text="@string/needed_date_time"
+            android:textAllCaps="true"
+            android:textColor="@color/oftenTextColorsTwo"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@id/topView"
+            tools:ignore="AllCaps" />
+
+        <TextView
+            android:id="@+id/tvDuration"
+            style="@style/textViewApp"
+            android:layout_marginTop="20dp"
+            android:text="@string/duration"
+            android:textAllCaps="true"
+            android:textColor="@color/oftenTextColorsTwo"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            app:layout_constraintTop_toBottomOf="@id/topView" />
+
+        <TextView
+            android:id="@+id/tvValueNeededDateTime"
+            style="@style/textViewApp"
+            android:layout_marginTop="6dp"
+            android:text="@string/_16_feb_2021_02_00pm"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@id/tvNeededDateTime" />
+
+        <TextView
+            android:id="@+id/tvValueDuration"
+            style="@style/textViewApp"
+            android:layout_marginTop="6dp"
+            android:text="@string/_7pm_to_7am"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            app:layout_constraintTop_toBottomOf="@id/tvNeededDateTime" />
+
+        <TextView
+            android:id="@+id/tvKids"
+            style="@style/textViewApp"
+            android:layout_marginTop="20dp"
+            android:text="@string/kids"
+            android:textAllCaps="true"
+            android:textColor="@color/oftenTextColorsTwo"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@id/tvValueNeededDateTime"
+            tools:ignore="AllCaps" />
+
+
+        <TextView
+            android:id="@+id/tvValueKids"
+            style="@style/textViewApp"
+            android:layout_marginTop="6dp"
+            tools:text="@string/_2_kid_s"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@id/tvKids" />
+
+
+        <TextView
+            android:id="@+id/tvApartmentNo"
+            style="@style/textViewApp"
+            android:layout_marginTop="20dp"
+            android:text="@string/house_flat_block_no"
+            android:textAllCaps="true"
+            android:textColor="@color/oftenTextColorsTwo"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@id/tvValueKids"
+            tools:ignore="AllCaps" />
+
+
+        <TextView
+            android:id="@+id/tvValueApartmentNo"
+            style="@style/textViewApp"
+            android:layout_marginTop="6dp"
+            tools:text="12"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@id/tvApartmentNo" />
+
+
+
+        <TextView
+            android:id="@+id/tvAddress"
+            style="@style/textViewApp"
+            android:layout_marginTop="20dp"
+            android:text="@string/_address"
+            android:textAllCaps="true"
+            android:textColor="@color/oftenTextColorsTwo"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@id/tvValueApartmentNo" />
+
+        <TextView
+            android:id="@+id/tvValueAddress"
+            style="@style/textViewApp"
+            android:layout_width="0dp"
+            android:layout_marginTop="6dp"
+            android:text="@string/address"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            app:layout_constraintEnd_toStartOf="@+id/endGuideline"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@id/tvAddress" />
+
+        <View
+            android:id="@+id/midView"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/white"
+            app:layout_constraintTop_toBottomOf="@id/tvValueAddress" />
+
+        <TextView
+            style="@style/textViewApp"
+            android:layout_marginTop="32dp"
+            android:text="@string/pricing"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@id/tvValueAddress" />
+
+        <TextView
+            android:id="@+id/tvServiceCharge"
+            style="@style/textViewApp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:text="@string/service_charge"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="@color/oftenTextColorsTwo"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@id/midView" />
+
+        <TextView
+            android:id="@+id/tvValueServiceCharge"
+            style="@style/textViewApp"
+            android:layout_marginTop="20dp"
+            android:text="@string/_100_00"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            app:layout_constraintTop_toBottomOf="@id/midView" />
+
+        <TextView
+            android:id="@+id/tvTax"
+            style="@style/textViewApp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:text="@string/tax"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="@color/oftenTextColorsTwo"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@id/tvServiceCharge" />
+
+        <TextView
+            android:id="@+id/tvValueTax"
+            style="@style/textViewApp"
+            android:layout_marginTop="20dp"
+            android:text="@string/_5_00"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            app:layout_constraintTop_toBottomOf="@id/tvValueServiceCharge" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvValueTax"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvTotalCharge"
+            style="@style/textViewApp"
+            android:layout_marginTop="32dp"
+            android:text="@string/total_charges"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@id/tvTax" />
+
+        <TextView
+            android:id="@+id/tvValueTotalCharge"
+            style="@style/textViewApp"
+            android:layout_marginTop="32dp"
+            android:text="@string/_105_00"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="@color/defaultRed"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            app:layout_constraintTop_toBottomOf="@id/tvTax" />
+
+        <Button
+            android:id="@+id/btnStartSearchingForNanny"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/buttonSize"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/red_button_shape_right"
+            android:fontFamily="@font/proxima_nova_medium"
+            android:text="@string/start_searching_for_nanny"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@id/tvTotalCharge" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/startGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.04" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/endGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.96" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

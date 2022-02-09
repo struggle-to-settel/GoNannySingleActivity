@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/appBackgroundColor"
+    android:layout_marginBottom="1dp"
+    android:paddingBottom="20dp">
+
+    <ImageView
+        android:id="@+id/ivStroke"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/round_image_red_stroke"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivNotificationSender"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintStart_toStartOf="@id/ivStroke"
+        app:layout_constraintTop_toTopOf="@id/ivStroke"
+        app:layout_constraintBottom_toBottomOf="@+id/ivStroke"
+        app:layout_constraintEnd_toEndOf="@+id/ivStroke"/>
+
+    <ImageView
+        android:id="@+id/ivUnseen"
+        android:layout_width="6dp"
+        android:layout_height="6dp"
+        android:layout_marginEnd="13dp"
+        android:background="@drawable/round_image_red_stroke"
+        android:backgroundTint="@color/defaultRed"
+        app:layout_constraintEnd_toEndOf="@id/ivStroke"
+        app:layout_constraintTop_toTopOf="@id/ivStroke"
+        app:layout_goneMarginTop="13dp" />
+
+    <TextView
+        android:id="@+id/tvNotificationTitle"
+        style="@style/textViewApp"
+        android:layout_width="0dp"
+        android:fontFamily="@font/proxima_nova_semi_bold"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintEnd_toStartOf="@id/tvNotificationArrivalTime"
+        app:layout_constraintStart_toEndOf="@id/ivNotificationSender"
+        app:layout_constraintTop_toTopOf="@id/ivNotificationSender" />
+
+    <TextView
+        android:id="@+id/tvNotificationMessage"
+        style="@style/textViewApp"
+        android:layout_width="0dp"
+        android:layout_marginTop="6dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintEnd_toEndOf="@id/tvNotificationArrivalTime"
+        app:layout_constraintStart_toStartOf="@id/tvNotificationTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvNotificationTitle" />
+
+    <TextView
+        android:id="@+id/tvNotificationArrivalTime"
+        style="@style/textViewApp"
+        android:layout_marginEnd="16dp"
+        android:textColor="@color/oftenTextColorsTwo"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvNotificationTitle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

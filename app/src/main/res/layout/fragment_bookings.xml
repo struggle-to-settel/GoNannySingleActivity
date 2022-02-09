@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/appBackgroundColor"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/buttonSize"
+        android:background="@color/white"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        app:tabIndicatorHeight="44dp"
+        app:tabIndicatorColor="@color/defaultRed"
+        android:theme="@style/tabLayout"
+        app:tabPadding="4dp"
+        app:tabSelectedTextColor="@android:color/white"
+        app:tabTextColor="@color/oftenTextColorsTwo"/>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:layout_marginTop="20dp"
+        android:id="@+id/viewPagerBookings"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

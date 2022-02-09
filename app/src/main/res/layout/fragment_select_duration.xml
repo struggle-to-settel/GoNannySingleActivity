@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appBackgroundColor"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_toolbar" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:checkedButton="@id/rbDurationOne"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp">
+
+        <RadioButton
+            android:id="@+id/rbDurationOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@drawable/radio_button_selector"
+            android:fontFamily="@font/proxima_nova_medium"
+            android:paddingHorizontal="16dp"
+            android:text="@string/duration_one"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/oftenTextColors" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@color/verticalBar" />
+
+        <RadioButton
+            android:id="@+id/rbDurationTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:button="@drawable/radio_button_selector"
+            android:fontFamily="@font/proxima_nova_medium"
+            android:paddingHorizontal="16dp"
+            android:text="@string/duration_two"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/oftenTextColors" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@color/verticalBar" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="20dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvStartTimeOne"
+                style="@style/textViewApp"
+                android:layout_marginTop="20dp"
+                android:text="@string/start_time"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/etStartTimeDurationOptionOne"
+                style="@style/editTextApp"
+                android:layout_width="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/curved_stroke"
+                android:cursorVisible="false"
+                android:drawableStart="@drawable/ic_time"
+                android:drawableEnd="@drawable/ic_drop_down"
+                android:drawablePadding="10dp"
+                android:focusable="false"
+                android:hint="@string/select_time"
+                android:paddingHorizontal="10dp"
+                app:layout_constraintEnd_toStartOf="@id/midOne"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvStartTimeOne" />
+
+            <TextView
+                android:id="@+id/tvEndTimeOne"
+                style="@style/textViewApp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/end_time"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                app:layout_constraintStart_toStartOf="@id/midOne"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/etEndTimeDurationOptionOne"
+                style="@style/editTextApp"
+                android:layout_width="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/curved_stroke"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:drawableStart="@drawable/ic_time"
+                android:drawableEnd="@drawable/ic_drop_down"
+                android:drawablePadding="10dp"
+                android:focusable="false"
+                android:hint="@string/select_time"
+                android:paddingHorizontal="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/midOne"
+                app:layout_constraintTop_toBottomOf="@id/tvEndTimeOne" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/midOne"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <RadioButton
+            android:id="@+id/rbDurationThree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:button="@drawable/radio_button_selector"
+            android:fontFamily="@font/proxima_nova_medium"
+            android:paddingHorizontal="16dp"
+            android:text="@string/duration_three"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/oftenTextColors" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@color/verticalBar" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="20dp"
+            android:visibility="gone">
+
+
+            <TextView
+                android:id="@+id/tvStartTimeTwo"
+                style="@style/textViewApp"
+                android:layout_marginTop="20dp"
+                android:text="@string/start_time"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/etStartTimeDurationOptionTwo"
+                style="@style/editTextApp"
+                android:layout_width="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/curved_stroke"
+                android:cursorVisible="false"
+                android:drawableStart="@drawable/ic_time"
+                android:drawableEnd="@drawable/ic_drop_down"
+                android:drawablePadding="10dp"
+                android:focusable="false"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:hint="@string/select_time"
+                android:paddingHorizontal="10dp"
+                app:layout_constraintEnd_toEndOf="@id/midTwo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvStartTimeTwo" />
+
+
+            <TextView
+                android:id="@+id/tvEndTimeTwo"
+                style="@style/textViewApp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/end_time"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                app:layout_constraintStart_toStartOf="@id/midTwo"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/etEndTimeDurationOptionTwo"
+                style="@style/editTextApp"
+                android:layout_width="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/curved_stroke"
+                android:cursorVisible="false"
+                android:drawableStart="@drawable/ic_time"
+                android:drawableEnd="@drawable/ic_drop_down"
+                android:drawablePadding="10dp"
+                android:focusable="false"
+                android:hint="@string/select_time"
+                android:paddingHorizontal="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/midTwo"
+                app:layout_constraintTop_toBottomOf="@id/tvEndTimeTwo" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/midTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnConfirmAndSelect"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/buttonSize"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/red_button_shape_right"
+        android:fontFamily="@font/proxima_nova_medium"
+        android:text="@string/confirm_select"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="20dp"
+        android:drawableStart="@drawable/ic_info"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/proxima_nova_regular"
+        android:text="@string/info_duration"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        android:textColor="@color/oftenTextColors"
+        tools:ignore="UseCompatTextViewDrawableXml" />
+
+</LinearLayout>

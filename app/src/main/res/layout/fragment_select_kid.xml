@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <TextView
+        android:id="@+id/tvNoKids"
+        style="@style/textViewApp"
+        android:text="Nothing to Show! Add kids"
+        android:fontFamily="@font/proxima_nova_semi_bold"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/includedToolbar"
+        layout="@layout/common_toolbar" />
+
+    <TextView
+        android:id="@+id/tvAddedKids"
+        style="@style/textViewApp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/proxima_nova_semi_bold"
+        android:text="@string/added_kid_s"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@id/startGuideline"
+        app:layout_constraintTop_toBottomOf="@id/includedToolbar" />
+
+
+    <ImageView
+        android:id="@+id/ivInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_info"
+        app:layout_constraintStart_toStartOf="@id/startGuideline"
+        app:layout_constraintTop_toBottomOf="@id/tvAddedKids" />
+
+    <TextView
+        android:id="@+id/tvInfoSelectKids"
+        style="@style/textViewApp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/proxima_nova_regular"
+        android:text="@string/info_select_kids"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        app:layout_constraintStart_toEndOf="@id/ivInfo"
+        app:layout_constraintTop_toBottomOf="@id/tvAddedKids" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSelectKids"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnConfirmAndSelect"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvInfoSelectKids" />
+
+    <Button
+        android:id="@+id/btnConfirmAndSelect"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/buttonSize"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/red_button_shape_right"
+        android:fontFamily="@font/proxima_nova_medium"
+        android:text="@string/confirm_select"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/endGuideline"
+        app:layout_constraintStart_toStartOf="@id/startGuideline" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/startGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.04" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/endGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.96" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

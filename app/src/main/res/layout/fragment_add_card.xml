@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appBackgroundColor"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_toolbar" />
+
+    <TextView
+        android:id="@+id/tvCardNumber"
+        style="@style/textViewApp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/card_number" />
+
+    <EditText
+        android:id="@+id/etCardNumber"
+        style="@style/editTextApp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/curved_stroke"
+        android:inputType="number"
+        android:maxLength="19"
+        android:paddingHorizontal="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvExpiry"
+                style="@style/textViewApp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/expiry" />
+
+            <EditText
+                android:id="@+id/etExpiry"
+                style="@style/editTextApp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/curved_stroke"
+                android:inputType="number"
+                android:maxLength="5"
+                android:paddingHorizontal="16dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvCVV"
+                style="@style/textViewApp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/cvv" />
+
+            <EditText
+                android:id="@+id/etCVV"
+                style="@style/editTextApp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/curved_stroke"
+                android:inputType="number"
+                android:maxLength="4"
+                android:paddingHorizontal="16dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/textViewApp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/card_holder_name" />
+
+    <EditText
+        android:id="@+id/etCardHolderName"
+        style="@style/editTextApp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/curved_stroke"
+        android:inputType="textPersonName"
+        android:maxLength="30"
+        android:maxLines="1"
+        android:paddingHorizontal="16dp" />
+
+
+    <Button
+        android:id="@+id/btnAddCard"
+        style="@style/buttonStyle"
+        android:layout_marginHorizontal="@dimen/marginDefault"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/red_button_shape_right"
+        android:inputType="textPersonName"
+        android:text="@string/add"
+        android:textColor="@android:color/white"
+        tools:ignore="TextViewEdits" />
+
+</LinearLayout>

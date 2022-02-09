@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/tvSend"
+        style="@style/textViewApp"
+        android:paddingVertical="12dp"
+        android:paddingHorizontal="20dp"
+        android:background="@drawable/send_chat_item_drawable"
+        android:layout_alignParentEnd="true"
+        android:maxWidth="280dp"
+        android:textColor="@color/white"
+        tools:text="Hello World"
+        />
+    <TextView
+        style="@style/textViewApp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/tvSend"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/oftenTextColorsTwo"
+        android:id="@+id/tvTimeSent"
+        />
+
+</RelativeLayout>

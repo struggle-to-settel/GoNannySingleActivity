@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:background="@color/appBackgroundColor"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_toolbar" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/mapView"
+                android:layout_width="match_parent"
+                android:layout_height="360dp"
+                android:nestedScrollingEnabled="true" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-74dp"
+                android:background="@drawable/curved_layout">
+
+                <TextView
+                    android:id="@+id/tvSelectAddress"
+                    style="@style/textViewApp"
+                    android:layout_marginStart="@dimen/marginDefault"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/select_location"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+                <TextView
+                    android:id="@+id/tvCityName"
+                    style="@style/textViewApp"
+                    android:layout_below="@id/tvSelectAddress"
+                    android:layout_marginStart="@dimen/marginDefault"
+                    android:layout_marginTop="12dp"
+                    android:drawablePadding="@dimen/marginDefault"
+                    android:fontFamily="@font/proxima_nova_semi_bold"
+                    android:maxWidth="200dp"
+                    tools:text="@string/new_york"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    app:drawableStartCompat="@drawable/ic_map_pin" />
+
+                <Button
+                    android:id="@+id/btnChange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:layout_below="@id/tvSelectAddress"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="@dimen/marginDefault"
+                    android:background="@drawable/green_button_shape_right"
+                    android:fontFamily="@font/proxima_nova_medium"
+                    android:text="@string/change"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/tvAddress"
+                    style="@style/textViewApp"
+                    android:layout_below="@id/tvCityName"
+                    android:layout_marginStart="@dimen/marginDefault"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/proxima_nova_regular"
+                    android:maxWidth="380dp"
+                    tools:text="@string/address"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+                <TextView
+                    android:id="@+id/tvBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvAddress"
+                    android:layout_marginHorizontal="@dimen/marginDefault"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/curved_text_view_background"
+                    android:fontFamily="@font/proxima_nova_medium"
+                    android:paddingHorizontal="@dimen/marginDefault"
+                    android:paddingVertical="@dimen/marginDefault"
+                    android:text="@string/a_detailed_address" />
+
+                <EditText
+                    android:id="@+id/etAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/buttonSize"
+                    android:layout_below="@id/tvBackground"
+                    android:layout_marginHorizontal="@dimen/marginDefault"
+                    android:layout_marginTop="@dimen/marginDefault"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:fontFamily="@font/proxima_nova_medium"
+                    android:hint="@string/house_flat_block_no"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/oftenTextColors" />
+
+                <EditText
+                    android:id="@+id/etAddressLandmark"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/buttonSize"
+                    android:layout_below="@id/etAddress"
+                    android:layout_marginHorizontal="@dimen/marginDefault"
+                    android:layout_marginTop="@dimen/marginDefault"
+                    android:fontFamily="@font/proxima_nova_medium"
+                    android:hint="@string/landmark"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/oftenTextColors" />
+
+                <CheckBox
+                    android:id="@+id/cbMailingAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/etAddressLandmark"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="@dimen/marginDefault"
+                    android:fontFamily="@font/proxima_nova_regular"
+                    android:text="@string/this_will_be_also_my_mailing_address"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/oftenTextColors" />
+
+                <Button
+                    android:id="@+id/btnAddAddress"
+                    style="@style/buttonStyle"
+                    android:layout_below="@id/cbMailingAddress"
+                    android:layout_marginHorizontal="@dimen/marginDefault"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/red_button_shape_right"
+                    android:fontFamily="@font/proxima_nova_medium"
+                    android:text="@string/add_address"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@android:color/white" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

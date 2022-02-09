@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_toolbar" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="20dp">
+
+            <ImageView
+                android:id="@+id/ivProfilePic"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/round_image"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvProfilePic"
+                style="@style/textViewApp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:scaleType="fitXY"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvName"
+                style="@style/textViewApp"
+                android:layout_width="0dp"
+                android:layout_marginHorizontal="8dp"
+                android:textAlignment="center"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/proxima_nova_semi_bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivProfilePic"
+                tools:text="@string/john_dave" />
+
+            <Button
+                android:id="@+id/btnEditProfile"
+                style="@style/buttonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/green_button_shape_right"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="4dp"
+                android:text="@string/edit_profile"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+            <View
+                android:id="@+id/viewBorder"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/btnEditProfile"
+                android:layout_marginTop="20dp"
+                android:background="@color/verticalBar"
+                app:layout_constraintTop_toBottomOf="@id/btnEditProfile" />
+
+            <TextView
+                android:id="@+id/tvEmail"
+                style="@style/textViewApp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/email"
+                android:textColor="@color/oftenTextColorsTwo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/viewBorder" />
+
+            <ImageView
+                android:id="@+id/ivEmail"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@id/tvEmail"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/ic_email_color"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvEmail" />
+
+            <TextView
+                android:id="@+id/tvValueEmail"
+                style="@style/textViewApp"
+                android:layout_width="0dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/ivEmail"
+                app:layout_constraintEnd_toStartOf="@id/endGuideline"
+                app:layout_constraintStart_toStartOf="@id/tvEmail"
+                app:layout_constraintTop_toBottomOf="@id/tvEmail"
+                app:layout_constraintTop_toTopOf="@id/ivEmail"
+                tools:text="Vjdnonodn@gmail.com" />
+
+            <TextView
+                android:id="@+id/tvEmailVerify"
+                style="@style/textViewApp"
+                android:layout_below="@id/tvEmail"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="12dp"
+                android:text="@string/verify"
+                android:textAllCaps="true"
+                android:textColor="@color/defaultRed"
+                android:visibility="visible"
+                app:layout_constraintStart_toEndOf="@+id/endGuideline"
+                app:layout_constraintTop_toTopOf="@id/tvValueEmail" />
+
+            <ImageView
+                android:id="@+id/ivEmailVerified"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/endGuideline"
+                app:layout_constraintTop_toTopOf="@id/tvValueEmail"
+                android:src="@drawable/ic_verified_icon"
+                android:textColor="@color/defaultRed"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/ivPhoneNumber"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@id/tvPhoneNumber"
+                app:layout_constraintStart_toStartOf="@id/ivEmail"
+                android:src="@drawable/ic_phone_iphone_color" />
+
+            <TextView
+                android:id="@+id/tvPhoneNumber"
+                style="@style/textViewApp"
+                app:layout_constraintTop_toBottomOf="@id/tvValueEmail"
+                app:layout_constraintStart_toStartOf="@id/tvValueEmail"
+                android:layout_marginTop="30sp"
+                android:text="@string/phone_number"
+                android:textColor="@color/oftenTextColorsTwo" />
+
+            <TextView
+                android:id="@+id/tvValuePhoneNumber"
+                style="@style/textViewApp"
+                android:layout_width="0dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBottom_toBottomOf="@id/ivPhoneNumber"
+                app:layout_constraintEnd_toStartOf="@+id/endGuideline"
+                app:layout_constraintStart_toStartOf="@id/tvPhoneNumber"
+                app:layout_constraintTop_toTopOf="@id/ivPhoneNumber"
+                tools:text="+919653346069" />
+
+            <TextView
+                android:id="@+id/tvPhoneVerify"
+                style="@style/textViewApp"
+                android:text="@string/verify"
+                app:layout_constraintTop_toTopOf="@id/tvValuePhoneNumber"
+                android:textAllCaps="true"
+                app:layout_constraintStart_toEndOf="@id/endGuideline"
+                android:textColor="@color/defaultRed"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/ivPhoneVerified"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/tvValuePhoneNumber"
+                app:layout_constraintStart_toEndOf="@id/endGuideline"
+                android:src="@drawable/ic_verified_icon" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/endGuideline"
+                app:layout_constraintGuide_percent=".8"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

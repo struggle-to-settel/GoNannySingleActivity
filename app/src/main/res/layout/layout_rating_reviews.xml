@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_rating_reviews"
+    app:cardElevation="4dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="20dp">
+
+        <TextView
+            android:id="@+id/tvRatingReviews"
+            style="@style/textViewApp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@string/rating_reviews"
+            android:fontFamily="@font/proxima_nova_medium"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+        <TextView
+            android:id="@+id/tvBasedOn10Reviews"
+            style="@style/textViewApp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvRatingReviews"
+            android:layout_marginTop="16dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="@color/oftenTextColorsTwo"
+            android:text="@string/based_on_10_reviews" />
+
+        <TextView
+            android:id="@+id/tvOverallRating"
+            style="@style/textViewApp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvRatingReviews"
+            android:layout_marginTop="16dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="@color/yellowIconColor"
+            tools:text="@string/_4_5_overall" />
+
+        <RatingBar
+            android:id="@+id/rbFiveStars"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/ratingBarStyleSmall"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="12dp"
+            android:numStars="5"
+            tools:rating="5"
+            android:progressTint="@color/yellowIconColor"
+            app:layout_constraintTop_toBottomOf="@id/tvBasedOn10Reviews"/>
+
+        <ProgressBar
+            android:id="@+id/progressLineFiveStars"
+            android:layout_width="0dp"
+            android:layout_height="8dp"
+            android:background="@drawable/curved_button"
+            android:progressDrawable="@drawable/progress_line_background"
+            app:layout_constraintTop_toTopOf="@id/rbFiveStars"
+            app:layout_constraintBottom_toBottomOf="@id/rbFiveStars"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:indeterminate="false"
+            android:max="100"
+            tools:progress="10"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"/>
+
+        <TextView
+            android:id="@+id/tvPercentFive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/textViewApp"
+            tools:text="10%"
+            app:layout_constraintTop_toTopOf="@id/rbFiveStars"
+            app:layout_constraintBottom_toBottomOf="@id/rbFiveStars"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        <RatingBar
+            android:id="@+id/rbFourStars"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/ratingBarStyleSmall"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="12dp"
+            android:progressTint="@color/yellowIconColor"
+            android:numStars="5"
+            tools:rating="4"
+            app:layout_constraintTop_toBottomOf="@id/rbFiveStars"/>
+
+        <ProgressBar
+            android:id="@+id/progressLineFourStars"
+            android:layout_width="0dp"
+            android:layout_height="8dp"
+            android:background="@drawable/curved_button"
+            android:progressDrawable="@drawable/progress_line_background"
+            app:layout_constraintTop_toTopOf="@id/rbFourStars"
+            app:layout_constraintBottom_toBottomOf="@id/rbFourStars"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:indeterminate="false"
+            android:max="100"
+            tools:progress="0"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"/>
+
+        <TextView
+            android:id="@+id/tvPercentFour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/textViewApp"
+            tools:text="0%"
+            app:layout_constraintTop_toTopOf="@id/rbFourStars"
+            app:layout_constraintBottom_toBottomOf="@id/rbFourStars"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <RatingBar
+            android:id="@+id/rbThreeStars"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/ratingBarStyleSmall"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="12dp"
+            android:progressTint="@color/yellowIconColor"
+            android:numStars="5"
+            tools:rating="3"
+            app:layout_constraintTop_toBottomOf="@id/rbFourStars"/>
+
+        <ProgressBar
+            android:id="@+id/progressLineThreeStars"
+            android:layout_width="0dp"
+            android:layout_height="8dp"
+            android:background="@drawable/curved_button"
+            android:progressDrawable="@drawable/progress_line_background"
+            app:layout_constraintTop_toTopOf="@id/rbThreeStars"
+            app:layout_constraintBottom_toBottomOf="@id/rbThreeStars"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:indeterminate="false"
+            android:max="100"
+            tools:progress="0"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"/>
+
+        <TextView
+            android:id="@+id/tvPercentThree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/textViewApp"
+            tools:text="0%"
+            app:layout_constraintTop_toTopOf="@id/rbThreeStars"
+            app:layout_constraintBottom_toBottomOf="@id/rbThreeStars"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        <RatingBar
+            android:id="@+id/rbTwoStars"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/ratingBarStyleSmall"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="12dp"
+            android:progressTint="@color/yellowIconColor"
+            android:numStars="5"
+            tools:rating="2"
+            app:layout_constraintTop_toBottomOf="@id/rbThreeStars"/>
+
+        <ProgressBar
+            android:id="@+id/progressLineTwoStars"
+            android:layout_width="0dp"
+            android:layout_height="8dp"
+            android:background="@drawable/curved_button"
+            android:progressDrawable="@drawable/progress_line_background"
+            app:layout_constraintTop_toTopOf="@id/rbTwoStars"
+            app:layout_constraintBottom_toBottomOf="@id/rbTwoStars"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:indeterminate="false"
+            android:max="100"
+            tools:progress="0"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"/>
+
+        <TextView
+            android:id="@+id/tvPercentTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/textViewApp"
+            tools:text="0%"
+            app:layout_constraintTop_toTopOf="@id/rbTwoStars"
+            app:layout_constraintBottom_toBottomOf="@id/rbTwoStars"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <RatingBar
+            android:id="@+id/rbOneStars"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/ratingBarStyleSmall"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="12dp"
+            android:progressTint="@color/yellowIconColor"
+            android:numStars="5"
+            tools:rating="1"
+            app:layout_constraintTop_toBottomOf="@id/rbTwoStars"/>
+
+        <ProgressBar
+            android:id="@+id/progressLineOneStars"
+            android:layout_width="0dp"
+            android:layout_height="8dp"
+            android:background="@drawable/curved_button"
+            android:progressDrawable="@drawable/progress_line_background"
+            app:layout_constraintTop_toTopOf="@id/rbOneStars"
+            app:layout_constraintBottom_toBottomOf="@id/rbOneStars"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:indeterminate="false"
+            android:max="100"
+            tools:progress="0"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"/>
+
+        <TextView
+            android:id="@+id/tvPercentOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/textViewApp"
+            tools:text="0%"
+            app:layout_constraintTop_toTopOf="@id/rbOneStars"
+            app:layout_constraintBottom_toBottomOf="@id/rbOneStars"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/startGuideline"
+            app:layout_constraintGuide_percent=".25"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/endGuideline"
+            app:layout_constraintGuide_percent=".85"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

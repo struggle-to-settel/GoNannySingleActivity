@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/ivLogOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_logout_icon"
+        android:padding="4dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/ivLogo"/>
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="132dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toTopOf="@+id/topGuideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCompleteSignUp"
+        style="@style/textViewApp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/proxima_nova_bold"
+        android:text="@string/complete_sign_up"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@+id/topSecondGuideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/topGuideline" />
+
+    <TextView
+        android:id="@+id/tvBelowCompleteSignup"
+        style="@style/textViewApp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/proxima_nova_regular"
+        android:text="@string/please_create_your_new_account"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        android:textColor="@color/oftenTextColorsTwo"
+        app:layout_constraintBottom_toTopOf="@+id/topSecondGuideline"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etName"
+        style="@style/editTextApp"
+        android:layout_marginHorizontal="16dp"
+        android:background="@drawable/curved_stroke"
+        android:drawableStart="@drawable/ic_person"
+        android:drawablePadding="16dp"
+        android:fontFamily="@font/proxima_nova_regular"
+        android:hint="@string/name"
+        android:inputType="textPersonName"
+        android:maxLength="30"
+        android:maxLines="1"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintVertical_chainStyle="spread"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topSecondGuideline"
+        app:layout_constraintBottom_toTopOf="@id/etEmail"/>
+
+    <EditText
+        android:id="@+id/etEmail"
+        style="@style/editTextApp"
+        android:layout_marginHorizontal="16dp"
+        android:background="@drawable/curved_stroke"
+        android:drawableStart="@drawable/ic_email_color"
+        android:drawablePadding="16dp"
+        android:fontFamily="@font/proxima_nova_regular"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintBottom_toTopOf="@id/tilPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etName" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPassword"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginHorizontal="16dp"
+        android:fontFamily="@font/proxima_nova_regular"
+        app:hintAnimationEnabled="false"
+        app:hintEnabled="false"
+        app:layout_constraintBottom_toTopOf="@id/bottomOneGuideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etEmail"
+        app:passwordToggleDrawable="@drawable/password_selector"
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            android:id="@+id/etPassword"
+            style="@style/editTextApp"
+            android:background="@drawable/curved_stroke"
+            android:drawableStart="@drawable/ic_password"
+            android:drawablePadding="16dp"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:paddingHorizontal="16dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvTermsConditions"
+        style="@style/textViewApp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/proxima_nova_regular"
+        android:text="@string/terms_amp_privacy"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bottomOneGuideline" />
+
+    <Button
+        android:id="@+id/btnSignUp"
+        style="@style/buttonStyle"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="16dp"
+        android:background="@drawable/red_button_shape_right"
+        android:fontFamily="@font/proxima_nova_regular"
+        android:text="@string/sign_up"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTermsConditions" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topGuideline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topSecondGuideline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".42" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottomOneGuideline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".72" />
+</androidx.constraintlayout.widget.ConstraintLayout>

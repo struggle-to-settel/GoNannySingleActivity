@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivProfilePic"
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/image_one"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/ivBack"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="16dp"
+            android:background="@drawable/curved_layout_white"
+            android:src="@drawable/ic_back"/>
+
+
+        <View
+            android:id="@+id/viewOne"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/appBackgroundColor"
+            app:layout_constraintBottom_toBottomOf="@id/ivProfilePic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvNannyName" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:background="@drawable/curved_layout_white"
+            android:elevation="4dp"
+            app:layout_constraintBottom_toBottomOf="@id/ivProfilePic"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            app:layout_constraintStart_toStartOf="@id/startGuideline" />
+
+        <TextView
+            android:id="@+id/tvNannyName"
+            style="@style/textViewApp"
+            android:elevation="4dp"
+            android:text="@string/eliana_d_cruz"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintBottom_toTopOf="@id/ratingBar"
+            app:layout_constraintEnd_toEndOf="@id/view"
+            app:layout_constraintStart_toStartOf="@id/view"
+            app:layout_constraintTop_toTopOf="@id/view"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:elevation="4dp"
+            android:isIndicator="true"
+            android:progressTint="@color/yellowIconColor"
+            android:rating="4.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintEnd_toStartOf="@id/tvValueRating"
+            android:secondaryProgressTint="@android:color/darker_gray"
+            app:layout_constraintBottom_toBottomOf="@id/view"
+            app:layout_constraintStart_toStartOf="@id/tvNannyName"
+            app:layout_constraintTop_toBottomOf="@id/tvNannyName" />
+
+        <TextView
+            android:id="@+id/tvValueRating"
+            style="@style/textViewApp"
+            android:layout_height="0dp"
+            android:elevation="4dp"
+            android:fontFamily="@font/proxima_nova_medium"
+            android:gravity="center"
+            android:text="4.5"
+            app:layout_constraintEnd_toEndOf="@id/tvNannyName"
+            android:textColor="@color/yellowIconColor"
+            app:layout_constraintBottom_toBottomOf="@id/ratingBar"
+            app:layout_constraintStart_toEndOf="@id/ratingBar"
+            app:layout_constraintTop_toTopOf="@id/ratingBar" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:theme="@style/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewOne"
+            app:tabIndicatorAnimationMode="elastic"
+            app:tabIndicatorColor="@color/defaultRed"
+            app:tabIndicatorHeight="2dp"
+            app:tabSelectedTextColor="@color/defaultRed"
+            app:tabTextAppearance="@style/TextAppearance.AppCompat.Subhead"
+            app:tabTextColor="@color/black" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tabLayout" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/startGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".04" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/endGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".96" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

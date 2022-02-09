@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="20dp">
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="viewBorder,tvDuration,tvValueDuration,tvKids,tvValueKids" />
+
+        <ImageView
+            android:id="@+id/ivNannyProfilePic"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/round_image"
+            android:backgroundTint="@color/blueColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            style="@style/textViewApp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            app:layout_constraintBottom_toBottomOf="@id/ivNannyProfilePic"
+            app:layout_constraintEnd_toEndOf="@id/ivNannyProfilePic"
+            app:layout_constraintStart_toStartOf="@id/ivNannyProfilePic"
+            app:layout_constraintTop_toTopOf="@id/ivNannyProfilePic"
+            tools:text="B" />
+
+        <TextView
+            android:id="@+id/tvNannyName"
+            style="@style/textViewApp"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/proxima_nova_medium"
+            android:paddingTop="4dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintStart_toEndOf="@id/ivNannyProfilePic"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Meave" />
+
+        <RatingBar
+            android:id="@+id/ratingNanny"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:progressBackgroundTint="@android:color/darker_gray"
+            android:progressTint="@color/yellowIconColor"
+            android:rating="4.5"
+            android:stepSize="0.5"
+            app:layout_constraintStart_toEndOf="@id/ivNannyProfilePic"
+            app:layout_constraintTop_toBottomOf="@id/tvNannyName" />
+
+        <TextView
+            style="@style/textViewApp"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/yellowIconColor"
+            app:layout_constraintStart_toEndOf="@id/ratingNanny"
+            app:layout_constraintTop_toBottomOf="@id/tvNannyName"
+            tools:text="4.5" />
+
+        <TextView
+            style="@style/textViewApp"
+            android:textColor="@color/oftenTextColorsTwo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="1 month ago" />
+
+        <View
+            android:id="@+id/viewBorder"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/verticalBar"
+            app:layout_constraintTop_toBottomOf="@id/ivNannyProfilePic" />
+
+        <TextView
+            android:id="@+id/tvDuration"
+            style="@style/textViewApp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/proxima_nova_medium"
+            android:text="@string/duration"
+            android:textAllCaps="true"
+            android:textColor="@color/oftenTextColorsTwo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewBorder" />
+
+        <TextView
+            android:id="@+id/tvKids"
+            style="@style/textViewApp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/proxima_nova_medium"
+            android:text="@string/kids"
+            android:textAllCaps="true"
+            android:textColor="@color/oftenTextColorsTwo"
+            app:layout_constraintStart_toStartOf="@id/endGuideline"
+            app:layout_constraintTop_toBottomOf="@id/viewBorder" />
+
+        <TextView
+            android:id="@+id/tvValueDuration"
+            style="@style/textViewApp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/proxima_nova_medium"
+            android:textAllCaps="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDuration"
+            tools:text="@string/_7pm_to_7am" />
+
+        <TextView
+            android:id="@+id/tvValueKids"
+            style="@style/textViewApp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/proxima_nova_medium"
+            android:text="@string/_2_kid_s"
+            android:textAllCaps="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            app:layout_constraintStart_toStartOf="@id/endGuideline"
+            app:layout_constraintTop_toBottomOf="@id/tvKids" />
+
+        <TextView
+            style="@style/textViewApp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:lineSpacingExtra="6dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="@color/oftenTextColorsTwo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvValueDuration"
+            tools:text="Lorem ipsum dolor sit amet, consectetur adipis cing elit. Quisque nec leo vel ligula." />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/endGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.84" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

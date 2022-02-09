@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="16dp"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp">
+
+        <TextView
+            android:id="@+id/tvNeededDate"
+            style="@style/textViewApp"
+            android:text="@string/needed_date"
+            android:textAllCaps="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/oftenTextColorsTwo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvValueNeededDate"
+            style="@style/textViewApp"
+            android:layout_marginTop="4dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvNeededDate"
+            tools:text="08 Feb 2022" />
+
+        <TextView
+            android:id="@+id/tvKids"
+            style="@style/textViewApp"
+            android:text="@string/kids"
+            android:textAllCaps="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/oftenTextColorsTwo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvValueKids"
+            style="@style/textViewApp"
+            android:layout_margin="4dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvKids"
+            tools:text="1 kid" />
+
+        <TextView
+            android:id="@+id/tvDuration"
+            style="@style/textViewApp"
+            android:layout_marginTop="20dp"
+            android:text="@string/duration"
+            android:textAllCaps="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/oftenTextColorsTwo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvValueNeededDate" />
+
+        <TextView
+            android:id="@+id/tvValueDuration"
+            style="@style/textViewApp"
+            android:layout_marginTop="4dp"
+            android:text="@string/_7pm_to_7am"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDuration" />
+
+        <Button
+            android:id="@+id/btnApprove"
+            style="@style/buttonStyle"
+            android:layout_width="match_parent"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/red_button_shape_right"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/tvValueDuration"
+            tools:text="Approve (00:46) " />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvNewRequest"
+            style="@style/textViewApp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            tools:text="New Request" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvNannyHome"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tvNewRequest"
+            android:layout_marginHorizontal="16dp" />
+
+        <TextView
+            android:id="@+id/tvReadyForRequest"
+            style="@style/textViewApp"
+            android:layout_centerInParent="true"
+            android:text="@string/ready_for_requests"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/rlOffline"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/ivOffline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/tvOffline"
+                android:layout_alignEnd="@id/tvOffline"
+                android:src="@drawable/ic_offline" />
+
+            <TextView
+                android:id="@+id/tvOffline"
+                style="@style/textViewApp"
+                android:layout_below="@id/ivOffline"
+                android:text="@string/you_are_offline"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

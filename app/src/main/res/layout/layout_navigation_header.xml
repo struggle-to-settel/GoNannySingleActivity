@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/defaultRed"
+    android:orientation="vertical"
+    android:paddingTop="20dp">
+
+    <TextView
+        android:id="@+id/tvCloseMenu"
+        style="@style/textViewApp"
+        android:layout_alignStart="@id/ivHeaderNavigation"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/proxima_nova_regular"
+        android:gravity="center"
+        android:text="@string/close_menu"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/white"
+        app:drawableStartCompat="@drawable/close_buton_selector" />
+
+    <ImageView
+        android:id="@+id/ivHeaderNavigation"
+        android:layout_width="80dp"
+        android:background="@drawable/round_image"
+        android:adjustViewBounds="true"
+        android:layout_height="80dp"
+        android:layout_below="@id/tvCloseMenu"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp" />
+
+    <TextView
+        android:id="@+id/tvHeaderNavigation"
+        style="@style/textViewApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/ivHeaderNavigation"
+        android:layout_alignBottom="@id/ivHeaderNavigation"
+        android:layout_alignStart="@id/ivHeaderNavigation"
+        android:layout_alignEnd="@id/ivHeaderNavigation"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+    <TextView
+        android:id="@+id/tvHeaderName"
+        style="@style/textViewApp"
+        android:layout_below="@id/ivHeaderNavigation"
+        android:layout_alignStart="@id/ivHeaderNavigation"
+        android:fontFamily="@font/proxima_nova_semi_bold"
+        android:text="@string/john_dave"
+        android:layout_marginTop="12dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvHeaderEmail"
+        style="@style/textViewApp"
+        android:layout_below="@id/tvHeaderName"
+        android:layout_marginTop="12dp"
+        android:layout_alignStart="@id/tvHeaderName"
+        android:fontFamily="@font/proxima_nova_regular"
+        android:text="@string/johndoe123_email_com"
+        android:textColor="@android:color/white" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_below="@id/tvHeaderEmail"
+        android:layout_marginTop="28dp"
+        android:background="@color/defaultScreenColor" />
+
+
+</RelativeLayout>

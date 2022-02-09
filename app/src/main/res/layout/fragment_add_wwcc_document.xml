@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvStatesTitle"
+                style="@style/textViewApp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/states"
+                android:textColor="@color/oftenTextColorsTwo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteSelectStates"
+                style="@style/editTextApp"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/curved_stroke"
+                android:completionThreshold="1"
+                android:cursorVisible="false"
+                android:drawableEnd="@drawable/ic_drop_down"
+                android:dropDownWidth="match_parent"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="center_vertical"
+                android:hint="@string/select_state"
+                android:paddingHorizontal="16dp"
+                app:layout_constraintTop_toBottomOf="@id/tvStatesTitle"
+                tools:ignore="TouchTargetSizeCheck"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/code_background_stroke"
+                app:layout_constraintTop_toBottomOf="@id/autoCompleteSelectStates" />
+
+            <ImageView
+                android:id="@+id/ivUploadedPhoto"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="4dp"
+                android:elevation="2dp"
+                app:layout_constraintBottom_toBottomOf="@id/view"
+                app:layout_constraintEnd_toEndOf="@id/view"
+                app:layout_constraintStart_toStartOf="@id/view"
+                app:layout_constraintTop_toTopOf="@id/view" />
+
+            <TextView
+                android:id="@+id/tvUploadWWCCDocument"
+                style="@style/textViewApp"
+                android:layout_marginBottom="12dp"
+                android:elevation="4dp"
+                android:text="@string/upload_wwcc_documents"
+                android:textAllCaps="true"
+                app:layout_constraintBottom_toBottomOf="@id/view"
+                app:layout_constraintEnd_toEndOf="@id/view"
+                app:layout_constraintStart_toStartOf="@id/view" />
+
+            <ImageView
+                android:id="@+id/ivUploadWWCC"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="4dp"
+                android:elevation="4dp"
+                android:src="@drawable/ic_upload"
+                app:layout_constraintBottom_toTopOf="@id/tvUploadWWCCDocument"
+                app:layout_constraintEnd_toEndOf="@id/view"
+                app:layout_constraintStart_toStartOf="@id/view" />
+
+            <Button
+                android:id="@+id/btnSubmit"
+                style="@style/buttonStyle"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/red_button_shape_right"
+                android:text="@string/submit"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/view"
+                tools:ignore="TouchTargetSizeCheck"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvWWCCDocuments"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="@id/btnSubmit"
+                app:layout_constraintEnd_toEndOf="@id/btnSubmit"
+                tools:listitem="@layout/item_nanny_image"
+                app:layout_constraintTop_toBottomOf="@id/btnSubmit"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</LinearLayout>

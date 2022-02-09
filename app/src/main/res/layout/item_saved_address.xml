@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="20dp"
+    app:cardCornerRadius="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="16dp">
+        <TextView
+            android:layout_marginStart="16dp"
+            android:id="@+id/tvHouseNo"
+            style="@style/textViewApp"
+            android:text="@string/house_flat_block_no"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:fontFamily="@font/proxima_nova_semi_bold"
+            />
+        <TextView
+            android:id="@+id/tvValueHouseNo"
+            android:layout_toEndOf="@id/tvHouseNo"
+            style="@style/textViewApp"
+            android:text="12"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:paddingHorizontal="10dp"
+            />
+
+        <ImageView
+            android:id="@+id/ivMapPinGreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_map_pin_green" />
+
+        <TextView
+            android:id="@+id/tvAddress"
+            style="@style/textViewApp"
+            android:layout_below="@id/tvHouseNo"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/proxima_nova_semi_bold"
+            android:text="@string/address_dot"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+        <TextView
+            android:id="@+id/tvValueAddress"
+            style="@style/textViewApp"
+            android:layout_toEndOf="@id/tvAddress"
+            android:layout_marginTop="20dp"
+            android:paddingHorizontal="16dp"
+            android:layout_toStartOf="@id/ivMapPinGreen"
+            android:layout_below="@id/tvHouseNo"/>
+
+        <TextView
+            android:id="@+id/tvLandmark"
+            style="@style/textViewApp"
+            android:layout_marginStart="16dp"
+            android:layout_below="@id/tvValueAddress"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/proxima_nova_semi_bold"
+            android:text="@string/landmark_dot"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+        <TextView
+            android:id="@+id/tvValueLandmark"
+            style="@style/textViewApp"
+            android:layout_below="@id/tvValueAddress"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@id/tvLandmark"
+            android:paddingHorizontal="16dp" />
+
+        <Button
+            android:id="@+id/btnSelectAddress"
+            style="@style/buttonStyle"
+            android:layout_below="@id/tvValueLandmark"
+            android:layout_marginTop="20dp"
+            android:background="@color/btnGreen"
+            android:text="@string/select"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btnEditAddress"
+            style="@style/buttonStyle"
+            android:layout_below="@id/tvValueLandmark"
+            android:layout_marginTop="20dp"
+            android:background="@color/btnGreen"
+            android:text="@string/edit"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

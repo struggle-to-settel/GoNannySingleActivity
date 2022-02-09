@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:paddingBottom="20dp"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvUploadDocs"
+                style="@style/textViewApp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/upload_docs_for_background_check"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:textColor="@color/oftenTextColorsTwo" />
+
+            <TextView
+                android:id="@+id/tvAddWWCC"
+                style="@style/textViewApp"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/tvUploadDocs"
+                android:layout_alignParentStart="true"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_toStartOf="@id/editWWCC"
+                android:drawablePadding="16dp"
+                android:gravity="center_vertical"
+                android:paddingVertical="8dp"
+                android:text="@string/add_wwcc"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:textColor="@color/oftenTextColorsTwo"
+                app:drawableStartCompat="@drawable/ic_link" />
+
+            <ImageView
+                android:id="@+id/editWWCC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/tvAddWWCC"
+                android:layout_alignBottom="@id/tvAddWWCC"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="16dp"
+                android:padding="4dp"
+                android:src="@drawable/ic_edit"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <View
+                android:id="@+id/viewOne"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/tvAddWWCC"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/verticalBar" />
+
+            <RelativeLayout
+                android:id="@+id/rlFirstAid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_below="@id/viewOne"
+                android:layout_marginHorizontal="16dp">
+
+                <TextView
+                    android:id="@+id/tvAddFirstAid"
+                    style="@style/textViewApp"
+                    android:layout_width="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="4dp"
+                    android:drawablePadding="16dp"
+                    android:gravity="center_vertical"
+                    android:paddingVertical="8dp"
+                    android:text="@string/add_first_aid"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/oftenTextColorsTwo"
+                    android:visibility="visible"
+                    app:drawableStartCompat="@drawable/ic_link" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/imageCardFirstAid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:visibility="gone">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/ivCardFirstAid"
+                            android:layout_width="match_parent"
+                            android:layout_height="180dp"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvCardFirstAidCaption"
+                            style="@style/textViewApp"
+                            android:layout_width="match_parent"
+                            android:background="@color/white"
+                            android:paddingHorizontal="16dp"
+                            android:paddingVertical="12dp"
+                            android:text="@string/first_aid"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/ivCardFirstAid" />
+
+                        <ImageView
+                            android:id="@+id/ivCardDeleteFirstAid"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginTop="32dp"
+                            android:background="@drawable/round_image"
+                            android:backgroundTint="@color/white"
+                            android:padding="6dp"
+                            android:src="@drawable/ic_delete"
+                            app:layout_constraintStart_toStartOf="@id/guideline"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <ImageView
+                            android:id="@+id/ivCardEditFirstAid"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginTop="16dp"
+                            android:background="@drawable/round_image"
+                            android:backgroundTint="@color/white"
+                            android:padding="6dp"
+                            android:src="@drawable/ic_edit"
+                            app:layout_constraintStart_toStartOf="@id/guideline"
+                            app:layout_constraintTop_toBottomOf="@id/ivCardDeleteFirstAid" />
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/guideline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.8" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+
+            <View
+                android:id="@+id/viewTwo"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/rlFirstAid"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/verticalBar" />
+
+            <RelativeLayout
+                android:id="@+id/rlCPR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_below="@id/viewTwo"
+                android:layout_marginHorizontal="16dp">
+
+                <TextView
+                    android:id="@+id/tvAddCPR"
+                    style="@style/textViewApp"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="4dp"
+                    android:drawablePadding="16dp"
+                    android:gravity="center_vertical"
+                    android:paddingVertical="8dp"
+                    android:text="@string/add_cpr"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/oftenTextColorsTwo"
+                    app:drawableStartCompat="@drawable/ic_link" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/imageCardCPR"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:visibility="gone">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/ivCardCPR"
+                            android:layout_width="match_parent"
+                            android:layout_height="180dp"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvCardCPRCaption"
+                            style="@style/textViewApp"
+                            android:layout_width="match_parent"
+                            android:background="@color/white"
+                            android:paddingHorizontal="16dp"
+                            android:paddingVertical="12dp"
+                            android:text="@string/cpr"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/ivCardCPR" />
+
+                        <ImageView
+                            android:id="@+id/ivCardDeleteCPR"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginTop="32dp"
+                            android:background="@drawable/round_image"
+                            android:backgroundTint="@color/white"
+                            android:padding="6dp"
+                            android:src="@drawable/ic_delete"
+                            app:layout_constraintStart_toStartOf="@id/guidelineOne"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <ImageView
+                            android:id="@+id/ivCardEditCPR"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginTop="16dp"
+                            android:background="@drawable/round_image"
+                            android:backgroundTint="@color/white"
+                            android:padding="6dp"
+                            android:src="@drawable/ic_edit"
+                            app:layout_constraintStart_toStartOf="@id/guidelineOne"
+                            app:layout_constraintTop_toBottomOf="@id/ivCardDeleteCPR" />
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/guidelineOne"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.8" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/viewThree"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/rlCPR"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/verticalBar" />
+
+            <RelativeLayout
+                android:id="@+id/rlPoliceCheck"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_below="@id/viewThree"
+                android:layout_marginHorizontal="16dp">
+
+                <TextView
+                    android:id="@+id/tvAddPoliceCheck"
+                    style="@style/textViewApp"
+                    android:layout_width="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="4dp"
+                    android:drawablePadding="16dp"
+                    android:gravity="center_vertical"
+                    android:paddingVertical="8dp"
+                    android:text="@string/add_police_check"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/oftenTextColorsTwo"
+                    app:drawableStartCompat="@drawable/ic_link" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/imageCardPoliceCheck"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:visibility="gone">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/ivCardPoliceCheck"
+                            android:layout_width="match_parent"
+                            android:layout_height="180dp"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvCardPoliceCheckCaption"
+                            style="@style/textViewApp"
+                            android:layout_width="match_parent"
+                            android:background="@color/white"
+                            android:paddingHorizontal="16dp"
+                            android:paddingVertical="12dp"
+                            android:text="@string/police_check"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/ivCardPoliceCheck" />
+
+                        <ImageView
+                            android:id="@+id/ivCardDeletePoliceCheck"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginTop="32dp"
+                            android:background="@drawable/round_image"
+                            android:backgroundTint="@color/white"
+                            android:padding="6dp"
+                            android:src="@drawable/ic_delete"
+                            app:layout_constraintStart_toStartOf="@id/guidelineTwo"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <ImageView
+                            android:id="@+id/ivCardEditPoliceCheck"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginTop="16dp"
+                            android:background="@drawable/round_image"
+                            android:backgroundTint="@color/white"
+                            android:padding="6dp"
+                            android:src="@drawable/ic_edit"
+                            app:layout_constraintStart_toStartOf="@id/guidelineTwo"
+                            app:layout_constraintTop_toBottomOf="@id/ivCardDeletePoliceCheck" />
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/guidelineTwo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.8" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/viewFour"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/rlPoliceCheck"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/verticalBar" />
+
+            <RelativeLayout
+                android:id="@+id/rlInsurance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/viewFour"
+                android:layout_marginTop="12dp"
+                android:layout_marginHorizontal="16dp">
+
+                <TextView
+                    android:id="@+id/tvAddInsurance"
+                    style="@style/textViewApp"
+                    android:layout_width="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="4dp"
+                    android:drawablePadding="16dp"
+                    android:gravity="center_vertical"
+                    android:paddingVertical="8dp"
+                    android:text="@string/add_insurance"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/oftenTextColorsTwo"
+                    app:drawableStartCompat="@drawable/ic_link" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/imageCardInsurance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:visibility="gone">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/ivCardInsurance"
+                            android:layout_width="match_parent"
+                            android:layout_height="180dp"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvCardInsuranceCaption"
+                            style="@style/textViewApp"
+                            android:layout_width="match_parent"
+                            android:background="@color/white"
+                            android:paddingHorizontal="16dp"
+                            android:paddingVertical="12dp"
+                            android:text="@string/insurance"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/ivCardInsurance" />
+
+                        <ImageView
+                            android:id="@+id/ivCardDeleteInsurance"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginTop="32dp"
+                            android:background="@drawable/round_image"
+                            android:backgroundTint="@color/white"
+                            android:padding="6dp"
+                            android:src="@drawable/ic_delete"
+                            app:layout_constraintStart_toStartOf="@id/guidelineThree"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <ImageView
+                            android:id="@+id/ivCardEditInsurance"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginTop="16dp"
+                            android:background="@drawable/round_image"
+                            android:backgroundTint="@color/white"
+                            android:padding="6dp"
+                            android:src="@drawable/ic_edit"
+                            app:layout_constraintStart_toStartOf="@id/guidelineThree"
+                            app:layout_constraintTop_toBottomOf="@id/ivCardDeleteInsurance" />
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/guidelineThree"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.8" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+
+            <View
+                android:id="@+id/viewFive"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/rlInsurance"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/verticalBar" />
+
+
+            <TextView
+                style="@style/textViewApp"
+                android:layout_width="match_parent"
+                android:layout_below="@id/viewFive"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/info_add_all_details_to_earn_money"
+                android:textAlignment="textStart"
+                android:textColor="@color/oftenTextColorsTwo" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>

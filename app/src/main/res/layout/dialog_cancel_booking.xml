@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="20dp"
+    android:background="@color/appBackgroundColor"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tvCancelBooking"
+        style="@style/textViewApp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="24dp"
+        android:text="@string/cancel_booking_"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        />
+
+    <TextView
+        android:id="@+id/tvHelperCancelBooking"
+        style="@style/textViewApp"
+        android:layout_width="0dp"
+        app:layout_constraintTop_toBottomOf="@id/tvCancelBooking"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:text="@string/helper_text_cancel_booking"/>
+
+    <EditText
+        android:id="@+id/etReason"
+        style="@style/editTextApp"
+        android:layout_height="80dp"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/tvHelperCancelBooking"
+        android:layout_marginTop="20dp"
+        android:gravity="top"
+        android:background="@drawable/curved_stroke"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="10dp"
+        android:hint="@string/reason_of_cancellation"/>
+
+    <Button
+        android:id="@+id/btnDiscard"
+        android:layout_width="0dp"
+        style="@style/buttonStyle"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/white"
+        android:text="@string/discard"
+        android:background="@drawable/sky_blue_button_shape_right"
+        app:layout_constraintEnd_toStartOf="@id/btnProceed"
+        app:layout_constraintStart_toStartOf="@id/etReason"
+        app:layout_constraintTop_toBottomOf="@id/etReason"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/btnProceed"
+        android:layout_width="0dp"
+        style="@style/buttonStyle"
+        android:layout_marginStart="8dp"
+        android:text="@string/yes_cancel"
+        android:textColor="@color/white"
+        android:background="@drawable/red_button_shape_right"
+        app:layout_constraintStart_toEndOf="@id/btnDiscard"
+        app:layout_constraintEnd_toEndOf="@id/etReason"
+        app:layout_constraintTop_toBottomOf="@id/etReason"
+        android:layout_marginTop="20dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

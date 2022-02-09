@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appBackgroundColor">
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_back"
+        android:padding="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvOtpSentTo"
+        style="@style/textViewApp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/proxima_nova_semi_bold"
+        android:text="@string/enter_the_code_just_sent_to_n_91_987654321"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivBack" />
+
+    <EditText
+        android:id="@+id/etOtp"
+        style="@style/editTextApp"
+        android:layout_width="180dp"
+        android:layout_marginTop="@dimen/marginDefault"
+        android:layout_marginStart="16dp"
+        android:background="@android:color/transparent"
+        android:cursorVisible="false"
+        android:inputType="number"
+        android:maxLength="4"
+        android:textColor="@android:color/transparent"
+        android:textIsSelectable="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvOtpSentTo" />
+
+    <TextView
+        android:id="@+id/tvOtpOne"
+        android:layout_width="40dp"
+        android:layout_height="@dimen/buttonSize"
+        android:layout_marginTop="@dimen/marginDefault"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="@color/oftenTextColors"
+        app:layout_constraintEnd_toStartOf="@id/tvOtpTwo"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="@id/etOtp"
+        app:layout_constraintTop_toBottomOf="@id/tvOtpSentTo" />
+
+    <TextView
+        android:id="@+id/tvOtpTwo"
+        android:layout_width="40dp"
+        android:layout_height="@dimen/buttonSize"
+        android:layout_marginTop="@dimen/marginDefault"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="@color/oftenTextColors"
+        app:layout_constraintEnd_toStartOf="@id/tvOtpThree"
+        app:layout_constraintStart_toEndOf="@id/tvOtpOne"
+        app:layout_constraintTop_toBottomOf="@id/tvOtpSentTo" />
+
+    <TextView
+        android:id="@+id/tvOtpThree"
+        android:layout_width="40dp"
+        android:layout_height="@dimen/buttonSize"
+        android:layout_marginTop="@dimen/marginDefault"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="@color/oftenTextColors"
+        app:layout_constraintEnd_toStartOf="@id/tvOtpFour"
+        app:layout_constraintStart_toEndOf="@id/tvOtpTwo"
+        app:layout_constraintTop_toBottomOf="@id/tvOtpSentTo" />
+
+    <TextView
+        android:id="@+id/tvOtpFour"
+        android:layout_width="40dp"
+        android:layout_height="@dimen/buttonSize"
+        android:layout_marginTop="@dimen/marginDefault"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="@color/oftenTextColors"
+        app:layout_constraintEnd_toEndOf="@id/etOtp"
+        app:layout_constraintStart_toEndOf="@id/tvOtpThree"
+        app:layout_constraintTop_toBottomOf="@id/tvOtpSentTo" />
+
+    <View
+        android:id="@+id/viewBorderOne"
+        android:layout_width="40dp"
+        android:layout_height="2dp"
+        android:background="@color/defaultRed"
+        app:layout_constraintEnd_toStartOf="@id/viewBorderTwo"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="@id/tvOtpOne"
+        app:layout_constraintTop_toBottomOf="@id/etOtp" />
+
+    <View
+        android:id="@+id/viewBorderTwo"
+        android:layout_width="40dp"
+        android:layout_height="2dp"
+        android:background="@color/oftenTextColorsTwo"
+        app:layout_constraintEnd_toStartOf="@id/viewBorderThree"
+        app:layout_constraintStart_toEndOf="@id/viewBorderOne"
+        app:layout_constraintTop_toBottomOf="@id/etOtp" />
+
+    <View
+        android:id="@+id/viewBorderThree"
+        android:layout_width="40dp"
+        android:layout_height="2dp"
+        android:background="@color/oftenTextColorsTwo"
+        app:layout_constraintEnd_toStartOf="@id/viewBorderFour"
+        app:layout_constraintStart_toEndOf="@id/viewBorderTwo"
+        app:layout_constraintTop_toBottomOf="@id/etOtp" />
+
+    <View
+        android:id="@+id/viewBorderFour"
+        android:layout_width="40dp"
+        android:layout_height="2dp"
+        android:background="@color/oftenTextColorsTwo"
+        app:layout_constraintEnd_toEndOf="@id/etOtp"
+        app:layout_constraintStart_toEndOf="@id/viewBorderThree"
+        app:layout_constraintTop_toBottomOf="@id/etOtp" />
+
+    <TextView
+        android:id="@+id/tvDidNotGetCode"
+        style="@style/textViewApp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/proxima_nova_regular"
+        android:text="@string/did_not_get_code"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etOtp" />
+    <TextView
+        android:id="@+id/tvSendAgain"
+        style="@style/textViewApp"
+        android:paddingHorizontal="8dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/proxima_nova_regular"
+        android:text="@string/send_again"
+        android:textColor="@color/defaultRed"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        app:layout_constraintStart_toEndOf="@id/tvDidNotGetCode"
+        app:layout_constraintTop_toBottomOf="@id/etOtp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

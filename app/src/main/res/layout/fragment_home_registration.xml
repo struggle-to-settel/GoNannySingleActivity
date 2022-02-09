@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/ivRegistrationHome"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/welcome"
+        app:layout_constraintBottom_toBottomOf="@id/midGuideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/curved_layout"
+        app:layout_constraintBottom_toBottomOf="@id/bottomGuideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/midAboveGuideline" />
+
+
+    <TextView
+        android:id="@+id/tvWelcome"
+        style="@style/textViewApp"
+        android:fontFamily="@font/proxima_nova_semi_bold"
+        android:text="@string/welcome_to"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/midGuideline" />
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/logo_text_large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvWelcome" />
+
+    <Button
+        android:id="@+id/btnContinueNumber"
+        style="@style/buttonStyle"
+        android:layout_marginHorizontal="@dimen/marginDefault"
+        android:background="@drawable/red_button_shape_right"
+        android:drawableStart="@drawable/ic_phone_icon"
+        android:drawablePadding="@dimen/marginDefault"
+        android:fontFamily="@font/proxima_nova_medium"
+        android:paddingHorizontal="@dimen/marginDefault"
+        android:text="@string/continue_with_phone_number"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
+
+    <Button
+        android:id="@+id/btnContinueGoogle"
+        style="@style/buttonStyle"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="@dimen/marginDefault"
+        android:background="@drawable/curved_button"
+        android:backgroundTint="@color/googleRed"
+        android:drawableStart="@drawable/ic_google"
+        android:drawablePadding="@dimen/marginDefault"
+        android:fontFamily="@font/proxima_nova_medium"
+        android:paddingHorizontal="@dimen/marginDefault"
+        android:text="@string/continue_with_google"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnContinueNumber" />
+
+
+    <Button
+        android:id="@+id/btnContinueFacebook"
+        style="@style/buttonStyle"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="@dimen/marginDefault"
+        android:background="@drawable/curved_button"
+        android:backgroundTint="@color/facebookBlue"
+        android:drawableStart="@drawable/ic_facebook"
+        android:drawablePadding="@dimen/marginDefault"
+        android:fontFamily="@font/proxima_nova_medium"
+        android:paddingHorizontal="@dimen/marginDefault"
+        android:text="@string/continue_with_facebook"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnContinueGoogle" />
+
+    <TextView
+        android:id="@+id/tvAlreadyHaveSignIn"
+        style="@style/textViewApp"
+        android:fontFamily="@font/proxima_nova_regular"
+        android:text="@string/already_have_an_account_sign_in"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        app:layout_constraintBottom_toBottomOf="@id/bottomGuideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/midGuideline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/midAboveGuideline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".46" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottomGuideline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".99" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

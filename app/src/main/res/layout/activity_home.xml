@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:elevation="0dp"
+    android:fitsSystemWindows="false"
+    tools:context=".activities.HomeActivity">
+
+    <RelativeLayout
+        android:id="@+id/holder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/defaultRed">
+
+        <LinearLayout
+            android:id="@+id/contentView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="8dp"
+            android:orientation="vertical"
+            app:elevation="8dp">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarHome"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/appBackgroundColor"
+                android:elevation="4dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:navigationIcon="@drawable/ic_sidemenu"
+                app:title="Home">
+
+                <ImageView
+                    android:id="@+id/ivToolbarLogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="12dp"
+                    android:src="@drawable/logo_text_large"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/ivNotification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="12dp"
+                    android:padding="4dp"
+                    android:src="@drawable/notification_selector"
+                    android:visibility="gone" />
+
+
+                <RelativeLayout
+                    android:id="@+id/rlSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:layout_marginHorizontal="12dp"
+                    android:paddingHorizontal="4dp"
+                    android:visibility="visible">
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switchHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:checked="false"
+                        android:paddingHorizontal="2dp"
+                        android:scaleX="0.9"
+                        android:scaleY="0.8"
+                        android:thumb="@drawable/home_switch_thumb"
+                        app:switchMinWidth="96dp"
+                        app:track="@drawable/home_switch_track" />
+
+                    <TextView
+                        android:id="@+id/tvOnline"
+                        style="@style/textViewApp"
+                        android:layout_alignStart="@id/switchHome"
+                        android:layout_alignTop="@id/switchHome"
+                        android:layout_alignBottom="@id/switchHome"
+                        android:layout_marginStart="16dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/online"
+                        android:textColor="@color/white"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tvOffline"
+                        style="@style/textViewApp"
+                        android:layout_alignTop="@id/switchHome"
+                        android:layout_alignEnd="@id/switchHome"
+                        android:layout_alignBottom="@id/switchHome"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/offline"
+                        android:textColor="@color/white"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <FrameLayout
+                android:id="@+id/flActivityHome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigationViewHome"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/defaultRed"
+        android:paddingHorizontal="20dp"
+        app:headerLayout="@layout/layout_navigation_header"
+        app:itemBackground="@android:color/transparent"
+        app:itemIconSize="28dp"
+        app:itemIconTint="@color/color"
+        app:itemTextAppearance="@style/navigationItemText"
+        app:itemTextColor="@color/color"
+        app:menu="@menu/menu_navigation" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="20dp"
+    app:cardCornerRadius="4dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="16dp">
+
+        <TextView
+            android:id="@+id/tvQuestion"
+            style="@style/textViewApp"
+            android:text="@string/question"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:fontFamily="@font/proxima_nova_semi_bold"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvValueQuestion"
+            style="@style/textViewApp"
+            android:layout_width="0dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintTop_toTopOf="@id/tvQuestion"
+            app:layout_constraintStart_toEndOf="@id/tvQuestion"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvAnswer"
+            style="@style/textViewApp"
+            android:text="@string/answer"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:fontFamily="@font/proxima_nova_semi_bold"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tvValueQuestion"
+            app:layout_constraintStart_toStartOf="@id/tvQuestion" />
+
+        <TextView
+            android:id="@+id/tvValueAnswer"
+            style="@style/textViewApp"
+            app:layout_constraintTop_toTopOf="@id/tvAnswer"
+            app:layout_constraintStart_toEndOf="@id/tvAnswer"
+            android:layout_width="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="8dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

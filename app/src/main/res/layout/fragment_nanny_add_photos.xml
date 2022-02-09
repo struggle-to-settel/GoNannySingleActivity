@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/includedToolbar"
+        layout="@layout/common_toolbar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tvUploadPhotosTitle"
+                style="@style/textViewApp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/upload_photos"
+                android:textColor="@color/oftenTextColorsTwo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/viewUploadPhotos"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/code_background_stroke"
+                app:layout_constraintTop_toBottomOf="@id/tvUploadPhotosTitle" />
+
+            <ImageView
+                android:id="@+id/ivUploadedPhoto"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="4dp"
+                android:elevation="2dp"
+                app:layout_constraintBottom_toBottomOf="@id/viewUploadPhotos"
+                app:layout_constraintEnd_toEndOf="@id/viewUploadPhotos"
+                app:layout_constraintStart_toStartOf="@id/viewUploadPhotos"
+                app:layout_constraintTop_toTopOf="@id/viewUploadPhotos" />
+
+            <ImageView
+                android:id="@+id/ivUploadPhotos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:elevation="4dp"
+                android:src="@drawable/ic_upload"
+                app:layout_constraintBottom_toTopOf="@id/tvUploadPhotos"
+                app:layout_constraintEnd_toEndOf="@id/viewUploadPhotos"
+                app:layout_constraintStart_toStartOf="@id/viewUploadPhotos" />
+
+            <TextView
+                android:id="@+id/tvUploadPhotos"
+                style="@style/textViewApp"
+                android:layout_marginBottom="12dp"
+                android:elevation="4dp"
+                android:text="@string/upload_photos"
+                android:textAllCaps="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                app:layout_constraintBottom_toBottomOf="@id/viewUploadPhotos"
+                app:layout_constraintEnd_toEndOf="@id/viewUploadPhotos"
+                app:layout_constraintStart_toStartOf="@id/viewUploadPhotos" />
+
+
+            <EditText
+                android:id="@+id/etPhotoCaption"
+                style="@style/editTextApp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="12dp"
+                android:background="@android:color/transparent"
+                android:hint="@string/upload_caption"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/viewUploadPhotos" />
+
+            <View
+                android:id="@+id/viewBorder"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/verticalBar"
+                app:layout_constraintEnd_toEndOf="@id/etPhotoCaption"
+                app:layout_constraintStart_toStartOf="@id/etPhotoCaption"
+                app:layout_constraintTop_toBottomOf="@id/etPhotoCaption" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvUploadPhotos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@id/btnAddPhoto" />
+
+            <Button
+                android:id="@+id/btnAddPhoto"
+                style="@style/buttonStyle"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/red_button_shape_right"
+                android:text="@string/add_photo"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/viewBorder" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>

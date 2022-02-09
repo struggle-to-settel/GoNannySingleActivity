@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toTopOf="@+id/topGuideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvWelcomeBack"
+        style="@style/textViewApp"
+        android:layout_below="@id/ivLogo"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/proxima_nova_bold"
+        android:text="@string/welcome_back"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@+id/midGuideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/topGuideline" />
+
+    <TextView
+        android:id="@+id/tvHelperWelcomeBack"
+        style="@style/textViewApp"
+        android:layout_below="@id/tvWelcomeBack"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/proxima_nova_regular"
+        android:text="@string/please_log_in_to_your_account"
+        android:textColor="@color/oftenTextColorsTwo"
+        app:layout_constraintBottom_toTopOf="@+id/midGuideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvWelcomeBack" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvHelperWelcomeBack"
+        android:checkedButton="@id/rbMobileNumber"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/midBottomGuideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/midGuideline">
+
+        <RadioButton
+            android:id="@+id/rbMobileNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:button="@drawable/radio_button_selector"
+            android:fontFamily="@font/proxima_nova_medium"
+            android:paddingHorizontal="10dp"
+            android:text="@string/mobile_number"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/oftenTextColors" />
+
+        <RadioButton
+            android:id="@+id/rbEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/radio_button_selector"
+            android:fontFamily="@font/proxima_nova_medium"
+            android:paddingHorizontal="10dp"
+            android:text="@string/email"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/oftenTextColorsTwo" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/etEmail"
+        style="@style/editTextApp"
+        android:layout_below="@id/radioGroup"
+        android:layout_marginHorizontal="16dp"
+        android:background="@drawable/curved_stroke"
+        android:drawableStart="@drawable/ic_email_color"
+        android:drawablePadding="16dp"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:paddingHorizontal="16dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/viewMobile"
+        app:layout_constraintEnd_toEndOf="@id/viewMobile"
+        app:layout_constraintStart_toStartOf="@id/viewMobile"
+        app:layout_constraintTop_toTopOf="@id/viewMobile" />
+
+
+    <View
+        android:id="@+id/viewMobile"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginHorizontal="16dp"
+        android:background="@drawable/curved_stroke"
+        app:layout_constraintBottom_toTopOf="@id/tilPassword"
+        app:layout_constraintTop_toTopOf="@id/midBottomGuideline"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <com.hbb20.CountryCodePicker
+        android:id="@+id/tvIconCode"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:paddingHorizontal="4dp"
+        android:visibility="visible"
+        app:ccpDialog_allowSearch="true"
+        app:ccpDialog_showCloseIcon="true"
+        app:ccpDialog_textColor="@color/oftenTextColors"
+        app:ccp_arrowColor="@color/oftenTextColors"
+        app:ccp_showFlag="false"
+        app:ccp_showNameCode="false"
+        app:layout_constraintBottom_toBottomOf="@id/viewMobile"
+        app:layout_constraintStart_toStartOf="@id/viewMobile"
+        app:layout_constraintTop_toTopOf="@id/viewMobile" />
+
+    <View
+        android:id="@+id/viewBorderMobile"
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:layout_centerVertical="true"
+        android:layout_marginVertical="8dp"
+        android:layout_toEndOf="@id/tvIconCode"
+        android:background="@color/verticalBar"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/viewMobile"
+        app:layout_constraintStart_toEndOf="@id/tvIconCode"
+        app:layout_constraintTop_toTopOf="@id/viewMobile" />
+
+    <EditText
+        android:id="@+id/etMobileNumber"
+        style="@style/editTextApp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_toEndOf="@id/tvIconCode"
+        android:background="@android:color/transparent"
+        android:hint="@string/enter_phone_number"
+        android:inputType="phone"
+        android:paddingHorizontal="12dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/viewMobile"
+        app:layout_constraintEnd_toEndOf="@id/viewMobile"
+        app:layout_constraintStart_toEndOf="@id/viewBorderMobile"
+        app:layout_constraintTop_toTopOf="@id/viewMobile" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPassword"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_below="@id/radioGroup"
+        android:layout_marginHorizontal="16dp"
+        android:background="@drawable/curved_stroke"
+        app:hintAnimationEnabled="false"
+        app:hintEnabled="false"
+        app:layout_constraintBottom_toTopOf="@id/tvForgotPassword"
+        app:layout_constraintEnd_toEndOf="@id/viewMobile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewMobile"
+        app:passwordToggleDrawable="@drawable/password_selector"
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            android:id="@+id/etPassword"
+            style="@style/editTextApp"
+            android:background="@android:color/transparent"
+            android:drawableStart="@drawable/ic_password"
+            android:drawableEnd="@drawable/password_selector"
+            android:drawablePadding="16dp"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:paddingHorizontal="16dp" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvForgotPassword"
+        style="@style/textViewApp"
+        android:layout_below="@id/tilPassword"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/proxima_nova_regular"
+        android:text="@string/forgot_password"
+        app:layout_constraintBottom_toTopOf="@id/midBottomTwoGuideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tilPassword" />
+
+    <Button
+        android:id="@+id/btnSignIn"
+        style="@style/buttonStyle"
+        android:layout_below="@id/tvForgotPassword"
+        android:layout_marginHorizontal="@dimen/marginDefault"
+        android:layout_marginTop="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/midBottomTwoGuideline"
+        android:background="@drawable/red_button_shape_right"
+        android:fontFamily="@font/proxima_nova_medium"
+        android:text="@string/sign_in"
+        android:textColor="@android:color/white" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/midGuideline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topGuideline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".35" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/midBottomGuideline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".55" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/midBottomTwoGuideline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".78" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

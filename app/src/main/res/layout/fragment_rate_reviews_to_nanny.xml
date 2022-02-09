@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_toolbar"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivProfilePic"
+                android:layout_width="148dp"
+                android:layout_height="148dp"
+                android:layout_gravity="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/round_image"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="30dp"/>
+
+            <TextView
+                android:id="@+id/tvNannyName"
+                style="@style/textViewApp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:text="Eliana D'Cruz"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivProfilePic"
+                android:fontFamily="@font/proxima_nova_semi_bold"/>
+
+            <RatingBar
+                android:id="@+id/ratingStars"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp"
+                android:numStars="5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvNannyName"
+                android:progressDrawable="@drawable/rating_star_selector"
+                />
+
+            <EditText
+                android:id="@+id/etLeaveReview"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:gravity="top"
+                android:hint="@string/leave_a_review"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="12dp"
+                android:inputType="textMultiLine"
+                android:background="@drawable/curved_stroke"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ratingStars"
+                />
+
+            <Button
+                android:id="@+id/btnSubmitFeedback"
+                style="@style/buttonStyle"
+                app:layout_constraintTop_toBottomOf="@id/etLeaveReview"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/red_button_shape_right"
+                android:text="@string/submit_feedback"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

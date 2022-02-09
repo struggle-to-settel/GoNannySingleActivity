@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/includedToolbar"
+        layout="@layout/common_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btnAgree"
+        android:layout_below="@id/includedToolbar"
+        android:fillViewport="true">
+
+        <WebView
+            android:id="@+id/webView"
+            android:background="@color/white"
+            android:layout_margin="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnAgree"
+        style="@style/buttonStyle"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/marginDefault"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/green_button_shape_right"
+        android:fontFamily="@font/proxima_nova_medium"
+        android:text="@string/agree"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/white" />
+</RelativeLayout>

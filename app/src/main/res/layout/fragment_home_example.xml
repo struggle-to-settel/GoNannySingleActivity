@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appBackgroundColor">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/banner"
+        app:layout_constraintBottom_toBottomOf="@id/top"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvBookANanny"
+        style="@style/textViewApp"
+        android:layout_marginStart="@dimen/marginDefault"
+        android:fontFamily="@font/proxima_nova_semi_bold"
+        android:text="@string/book_a_nanny"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/topTwo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/top" />
+
+
+    <ImageView
+        android:id="@+id/ivDateTime"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="@dimen/marginDefault"
+        android:background="@drawable/calendar"
+        android:elevation="6dp"
+        android:paddingTop="6dp"
+        android:src="@drawable/ic_calendar"
+        app:layout_constraintBottom_toBottomOf="@id/itemOne"
+        app:layout_constraintStart_toStartOf="@id/view"
+        app:layout_constraintTop_toTopOf="@id/topTwo"
+        app:layout_goneMarginStart="16dp" />
+
+    <TextView
+        android:id="@+id/tvDateTime"
+        style="@style/textViewApp"
+        android:layout_width="0dp"
+        android:layout_marginHorizontal="8dp"
+        android:elevation="6dp"
+        android:fontFamily="@font/proxima_nova_regular"
+        android:paddingHorizontal="8dp"
+        android:text="@string/needed_date_time"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        app:layout_constraintBottom_toBottomOf="@id/itemOne"
+        app:layout_constraintEnd_toStartOf="@id/btnSelectDateTime"
+        app:layout_constraintStart_toEndOf="@id/ivDateTime"
+        app:layout_constraintTop_toTopOf="@id/topTwo" />
+
+
+    <TextView
+        android:id="@+id/btnSelectDateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/curved_stroke"
+        android:elevation="6dp"
+        android:fontFamily="@font/proxima_nova_medium"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="20dp"
+        android:text="@string/select"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="@color/oftenTextColors"
+        app:layout_constraintBottom_toBottomOf="@id/itemOne"
+        app:layout_constraintEnd_toEndOf="@id/view"
+        app:layout_constraintTop_toTopOf="@id/topTwo" />
+
+
+    <View
+        android:id="@+id/viewBorderOne"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/ivDateTime"
+        android:layout_marginHorizontal="@dimen/marginDefault"
+        android:layout_marginTop="20dp"
+        android:background="@color/verticalBar"
+        android:elevation="5dp"
+        app:layout_constraintBottom_toBottomOf="@id/itemOne" />
+
+
+    <ImageView
+        android:id="@+id/ivDuration"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/viewBorderOne"
+        android:layout_marginStart="@dimen/marginDefault"
+        android:background="@drawable/duration_drawable"
+        android:elevation="6dp"
+        android:paddingTop="6dp"
+        android:src="@drawable/ic_duration"
+        app:layout_constraintBottom_toBottomOf="@id/itemTwo"
+        app:layout_constraintStart_toStartOf="@id/view"
+        app:layout_constraintTop_toTopOf="@id/itemOne" />
+
+    <TextView
+        android:id="@+id/tvDuration"
+        style="@style/textViewApp"
+        android:layout_width="0dp"
+        android:layout_below="@id/viewBorderOne"
+        android:layout_marginHorizontal="8dp"
+        android:layout_toEndOf="@id/ivDateTime"
+        android:fontFamily="@font/proxima_nova_regular"
+        android:maxWidth="360dp"
+        android:paddingHorizontal="8dp"
+        android:text="@string/duration"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        app:layout_constraintEnd_toStartOf="@id/btnSelectDuration"
+        android:elevation="6dp"
+        app:layout_constraintBottom_toBottomOf="@id/itemTwo"
+        app:layout_constraintStart_toEndOf="@id/ivDuration"
+        app:layout_constraintTop_toTopOf="@id/itemOne" />
+
+    <TextView
+        android:id="@+id/btnSelectDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_below="@id/viewBorderOne"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/curved_stroke"
+        android:elevation="6dp"
+        android:fontFamily="@font/proxima_nova_medium"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="20dp"
+        android:text="@string/select"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="@color/oftenTextColors"
+        app:layout_constraintBottom_toBottomOf="@id/itemTwo"
+        app:layout_constraintEnd_toEndOf="@id/view"
+        app:layout_constraintTop_toTopOf="@id/itemOne" />
+
+
+    <View
+        android:id="@+id/viewBorderTwo"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:elevation="5dp"
+        android:layout_below="@id/ivDuration"
+        android:layout_marginHorizontal="@dimen/marginDefault"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/itemTwo"
+        android:background="@color/verticalBar" />
+
+
+
+    <ImageView
+        android:id="@+id/ivAddress"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/viewBorderTwo"
+        android:layout_marginStart="@dimen/marginDefault"
+        android:elevation="6dp"
+        android:background="@drawable/address_drawable"
+        android:paddingTop="6dp"
+        android:src="@drawable/ic_address"
+        app:layout_constraintStart_toStartOf="@id/view"
+        app:layout_constraintTop_toTopOf="@id/itemTwo"
+        app:layout_constraintBottom_toBottomOf="@id/itemThree"/>
+
+    <TextView
+        app:layout_constraintTop_toTopOf="@id/itemTwo"
+        app:layout_constraintBottom_toBottomOf="@id/itemThree"
+        app:layout_constraintStart_toEndOf="@id/ivAddress"
+        android:id="@+id/tvAddress"
+        style="@style/textViewApp"
+        android:layout_width="0dp"
+        android:elevation="6dp"
+        app:layout_constraintEnd_toStartOf="@id/btnSelectAddress"
+        android:layout_below="@id/viewBorderTwo"
+        android:paddingHorizontal="8dp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_toEndOf="@id/ivDateTime"
+        android:fontFamily="@font/proxima_nova_regular"
+        android:text="@string/_address"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+    <TextView
+        android:id="@+id/btnSelectAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_below="@id/viewBorderTwo"
+        android:layout_alignParentEnd="true"
+        app:layout_constraintEnd_toEndOf="@id/view"
+        app:layout_constraintTop_toTopOf="@id/itemTwo"
+        app:layout_constraintBottom_toBottomOf="@id/itemThree"
+        android:paddingHorizontal="20dp"
+        android:gravity="center_vertical"
+        android:elevation="6dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/curved_stroke"
+        android:fontFamily="@font/proxima_nova_medium"
+        android:text="@string/select"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="@color/oftenTextColors" />
+
+
+    <View
+        android:id="@+id/viewBorderThree"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:elevation="5dp"
+        app:layout_constraintBottom_toBottomOf="@id/itemThree"
+        android:layout_below="@id/ivAddress"
+        android:layout_marginHorizontal="@dimen/marginDefault"
+        android:layout_marginTop="20dp"
+        android:background="@color/verticalBar" />
+
+    <ImageView
+        android:id="@+id/ivNumberKids"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintStart_toStartOf="@id/view"
+        app:layout_constraintTop_toTopOf="@id/itemThree"
+        app:layout_constraintBottom_toBottomOf="@id/itemFour"
+        android:layout_marginStart="@dimen/marginDefault"
+        android:background="@drawable/kids_drawable"
+        android:paddingTop="6dp"
+        android:elevation="6dp"
+        android:src="@drawable/ic_kids"
+        />
+
+    <TextView
+        android:id="@+id/tvNumberKids"
+        style="@style/textViewApp"
+        app:layout_constraintStart_toEndOf="@id/ivNumberKids"
+        app:layout_constraintBottom_toBottomOf="@id/itemFour"
+        app:layout_constraintTop_toTopOf="@id/itemThree"
+        android:layout_width="0dp"
+        android:elevation="6dp"
+        android:paddingHorizontal="8dp"
+        android:layout_marginHorizontal="8dp"
+        app:layout_constraintEnd_toStartOf="@id/btnSelectNoOfKids"
+        android:fontFamily="@font/proxima_nova_regular"
+        android:text="@string/number_of_kids"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+    <TextView
+        android:id="@+id/btnSelectNoOfKids"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/curved_stroke"
+        android:fontFamily="@font/proxima_nova_medium"
+        android:text="@string/select"
+        android:textAllCaps="true"
+        app:layout_constraintTop_toTopOf="@id/itemThree"
+        app:layout_constraintBottom_toBottomOf="@id/itemFour"
+        android:paddingHorizontal="20dp"
+        android:gravity="center_vertical"
+        android:elevation="5dp"
+        app:layout_constraintEnd_toEndOf="@id/view"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="@color/oftenTextColors" />
+
+    <TextView
+        android:id="@+id/btnGetPricing"
+        style="@style/buttonStyle"
+        android:layout_marginHorizontal="@dimen/marginDefault"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/red_button_shape_right"
+        android:elevation="6dp"
+        android:gravity="center"
+        android:text="@string/get_pricing"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/ivNumberKids"
+        android:elevation="5dp"
+        android:layout_marginHorizontal="@dimen/marginDefault"
+        app:layout_constraintBottom_toBottomOf="@id/itemFour"
+        android:background="@color/verticalBar" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/curved_layout_white"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/topTwo" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".33" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topTwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".40" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/itemOne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".50" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/itemTwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".60" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/itemThree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".70" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/itemFour"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".80" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

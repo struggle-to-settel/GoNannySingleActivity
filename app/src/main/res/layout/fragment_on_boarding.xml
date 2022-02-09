@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vpOnBoarding"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/viewPagerGuideline"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingBottom="10dp"/>
+
+    <RelativeLayout
+        android:id="@+id/rlIndicators"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@id/btnSkip">
+
+        <ImageView
+            android:id="@+id/ivIndicatorOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/ivIndicatorTwo"
+            android:background="@drawable/indicator_selected" />
+
+        <ImageView
+            android:id="@+id/ivIndicatorTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/indicator_unselected" />
+
+        <ImageView
+            android:id="@+id/ivIndicatorThree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/ivIndicatorTwo"
+            android:background="@drawable/indicator_unselected" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnSkip"
+        style="@style/buttonStyle"
+        android:layout_marginHorizontal="@dimen/marginDefault"
+        android:layout_marginBottom="@dimen/marginDefault"
+        android:background="@drawable/curved_button_red_stroke"
+        android:fontFamily="@font/proxima_nova_semi_bold"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/defaultRed"
+        app:layout_constraintBottom_toTopOf="@+id/btnNext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnNext"
+        style="@style/buttonStyle"
+        android:layout_marginHorizontal="@dimen/marginDefault"
+        android:layout_marginBottom="@dimen/marginDefault"
+        android:background="@drawable/red_button_shape_right"
+        android:fontFamily="@font/proxima_nova_medium"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/viewPagerGuideline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.77"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

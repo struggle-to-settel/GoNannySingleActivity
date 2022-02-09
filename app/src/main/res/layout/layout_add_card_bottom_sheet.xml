@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/tvAddNewCard"
+        style="@style/textViewApp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="Add new Card"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="10dp"
+        android:padding="6dp"
+        android:src="@drawable/ic_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvAddNewCard"
+        app:cardCornerRadius="4dp"
+        android:layout_margin="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp">
+
+
+            <TextView
+                android:id="@+id/tvCardNumber"
+                style="@style/textViewApp"
+                android:layout_marginTop="24dp"
+                android:text="@string/enter_your_card_number"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                app:layout_constraintStart_toStartOf="@id/startGuideline"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/etCardNumber"
+                style="@style/editTextApp"
+                android:layout_width="0dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/curved_stroke"
+                android:inputType="number"
+                android:maxLength="19"
+                android:paddingHorizontal="16dp"
+                app:layout_constraintEnd_toEndOf="@id/endGuideline"
+                app:layout_constraintStart_toStartOf="@id/startGuideline"
+                app:layout_constraintTop_toBottomOf="@id/tvCardNumber" />
+
+            <TextView
+                android:id="@+id/tvExpiry"
+                style="@style/textViewApp"
+                android:layout_marginTop="20dp"
+                android:text="@string/expiry_validity_year"
+                android:textAllCaps="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                app:layout_constraintStart_toStartOf="@id/startGuideline"
+                app:layout_constraintTop_toBottomOf="@id/etCardNumber" />
+
+            <EditText
+                android:id="@+id/etCardExpiry"
+                style="@style/editTextApp"
+                android:layout_width="0dp"
+                android:layout_marginTop="10dp"
+                android:paddingHorizontal="16dp"
+                android:background="@drawable/curved_stroke"
+                app:layout_constraintEnd_toEndOf="@id/midOneGuideline"
+                app:layout_constraintStart_toStartOf="@id/startGuideline"
+                app:layout_constraintTop_toBottomOf="@id/tvExpiry" />
+
+            <TextView
+                android:id="@+id/tvCVV"
+                style="@style/textViewApp"
+                android:layout_marginTop="20dp"
+                android:text="@string/cvv"
+                android:textAllCaps="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                app:layout_constraintStart_toStartOf="@id/midTwoGuideline"
+                app:layout_constraintTop_toBottomOf="@id/etCardNumber" />
+
+            <EditText
+                android:id="@+id/etCVV"
+                style="@style/editTextApp"
+                android:layout_width="0dp"
+                android:layout_marginTop="10dp"
+                android:paddingHorizontal="16dp"
+                android:background="@drawable/curved_stroke"
+                app:layout_constraintEnd_toEndOf="@id/endGuideline"
+                app:layout_constraintStart_toStartOf="@id/midTwoGuideline"
+                app:layout_constraintTop_toBottomOf="@id/tvCVV" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/startGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.04" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/endGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.96" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/midOneGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.46" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/midTwoGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.54" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <CheckBox
+        android:id="@+id/cbSaveCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardView"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/oftenTextColors"
+        android:fontFamily="@font/proxima_nova_regular"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        android:text="@string/save_this_card_for_future_payments"/>
+
+    <Button
+        android:id="@+id/btnSavePay"
+        style="@style/buttonStyle"
+        android:layout_below="@id/cbSaveCard"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/red_button_shape_right"
+        android:text="@string/pay"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

@@ -1,0 +1,106 @@
+{
+  "project_info": {
+    "project_number": "126056044850",
+    "project_id": "gonanny-6f9df",
+    "storage_bucket": "gonanny-6f9df.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:126056044850:android:029c269165fd287f3d1f2b",
+        "android_client_info": {
+          "package_name": "com.au.gonanny"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "126056044850-fbqmo8cpg4pta4r4j5u4m5bdpe3v8ad2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.au.gonanny",
+            "certificate_hash": "c735383fddb8075bf2d1583e5f5eada65d8fa92b"
+          }
+        },
+        {
+          "client_id": "126056044850-pg6v4s8s93kh0fkn10h2ql2hsbm25hga.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.au.gonanny",
+            "certificate_hash": "42da54cc0b66d316201ade61022226fe769f0040"
+          }
+        },
+        {
+          "client_id": "126056044850-h4g9p1jvltd9dgkrnuelho2vuen9caqr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD02UcasKoKlgw8A3llnwlZnPsvM3QuBwQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "126056044850-h4g9p1jvltd9dgkrnuelho2vuen9caqr.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "126056044850-g9m54is4qdj6vd58orpsra3438b4fd6h.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.au.gonanny"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:126056044850:android:dbed90ca4b20c0ca3d1f2b",
+        "android_client_info": {
+          "package_name": "com.au.gonannysingleactivity"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "126056044850-k9n2rvm2i67ipf7jud3p2if5boakra06.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.au.gonannysingleactivity",
+            "certificate_hash": "21c859fabe6c8bc956b75422122d6e926ead391f"
+          }
+        },
+        {
+          "client_id": "126056044850-h4g9p1jvltd9dgkrnuelho2vuen9caqr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD02UcasKoKlgw8A3llnwlZnPsvM3QuBwQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "126056044850-h4g9p1jvltd9dgkrnuelho2vuen9caqr.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "126056044850-g9m54is4qdj6vd58orpsra3438b4fd6h.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.au.gonanny"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

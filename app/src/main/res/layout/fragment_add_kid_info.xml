@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/appBackgroundColor"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_toolbar"
+        />
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                style="@style/editTextApp"
+                android:id="@+id/etKidName"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:background="@drawable/curved_stroke"
+                android:hint="@string/name"
+                android:inputType="textPersonName"
+                android:paddingHorizontal="16dp" />
+
+            <EditText
+                android:id="@+id/etKidBehaviour"
+                style="@style/editTextApp"
+                android:layout_below="@id/etKidName"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/curved_stroke"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:hint="@string/hourly_behaviour"
+                android:inputType="text"
+                android:paddingHorizontal="16dp" />
+
+            <TextView
+                android:id="@+id/tvSuggestionBehaviour"
+                style="@style/textViewApp"
+                android:layout_below="@id/etKidBehaviour"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:text="@string/suggested_food_times_nap_time_favorite_shows"
+                android:textColor="@color/oftenTextColorsTwo" />
+
+            <EditText
+                android:id="@+id/etAllergy"
+                style="@style/editTextApp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:visibility="gone"
+                android:hint="@string/specify_allergies"
+                android:background="@drawable/curved_stroke"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:layout_below="@id/tvSuggestionBehaviour"
+                android:paddingHorizontal="16dp" />
+
+            <TextView
+                android:id="@+id/tvAllergies"
+                style="@style/textViewApp"
+                android:layout_below="@id/etAllergy"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:text="@string/allergies"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <RadioGroup
+                android:id="@+id/rgAllergies"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"
+                android:layout_below="@id/etAllergy"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="56dp"
+                android:checkedButton="@id/rbAllergiesNo"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbAllergiesYes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:button="@drawable/radio_button_selector"
+                    android:fontFamily="@font/proxima_nova_regular"
+                    android:paddingHorizontal="10dp"
+                    android:text="@string/yes"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+                <RadioButton
+                    android:id="@+id/rbAllergiesNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:button="@drawable/radio_button_selector"
+                    android:fontFamily="@font/proxima_nova_regular"
+                    android:paddingHorizontal="10dp"
+                    android:text="@string/no"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvHouseNumber"
+                style="@style/textViewApp"
+                android:layout_below="@id/tvAllergies"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:text="@string/indoor_camera"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <RadioGroup
+                android:id="@+id/rgIndoorCamera"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"
+                android:layout_below="@id/rgAllergies"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="56dp"
+                android:checkedButton="@id/rbIndoorCameraYes"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbIndoorCameraYes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:button="@drawable/radio_button_selector"
+                    android:fontFamily="@font/proxima_nova_regular"
+                    android:paddingHorizontal="10dp"
+                    android:text="@string/yes"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+                <RadioButton
+                    android:id="@+id/rbIndoorCameraNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:button="@drawable/radio_button_selector"
+                    android:fontFamily="@font/proxima_nova_regular"
+                    android:paddingHorizontal="10dp"
+                    android:text="@string/no"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/btnAdd"
+                style="@style/buttonStyle"
+                android:layout_below="@id/tvHouseNumber"
+                android:layout_marginHorizontal="@dimen/marginDefault"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/red_button_shape_right"
+                android:fontFamily="@font/proxima_nova_medium"
+                android:text="@string/add"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/tvInfoOne"
+                style="@style/textViewApp"
+                android:layout_below="@id/btnAdd"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:text="@string/you_can_only_add_7_kid_s"
+                android:textColor="@color/oftenTextColorsTwo"
+                app:drawableStartCompat="@drawable/ic_info" />
+
+            <TextView
+                android:id="@+id/tvInfoTwo"
+                style="@style/textViewApp"
+                android:layout_below="@id/tvInfoOne"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:text="@string/maximum_of_4_kids_of_pre_school_age_nor_under"
+                android:textColor="@color/oftenTextColorsTwo"
+                app:drawableStartCompat="@drawable/ic_info" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAddKidInfo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/tvInfoTwo"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/curved_layout"
+                android:backgroundTint="@color/defaultScreenColor"
+                android:overScrollMode="ifContentScrolls" />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

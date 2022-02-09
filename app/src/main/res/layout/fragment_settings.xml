@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/appBackgroundColor"
+        android:orientation="vertical"
+        android:paddingBottom="20dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            app:cardBackgroundColor="@color/defaultScreenColor">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="20dp">
+
+                <ImageView
+                    android:id="@+id/ivProfilePic"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/round_image"/>
+
+                <TextView
+                    android:id="@+id/tvProfilePic"
+                    style="@style/textViewApp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:src="@drawable/ic_profile_small"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+                <TextView
+                    android:id="@+id/tvName"
+                    style="@style/textViewApp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="28dp"
+                    android:layout_toEndOf="@id/ivProfilePic"
+                    android:text="@string/john_dave"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+
+                    />
+
+                <TextView
+                    android:id="@+id/tvShowProfile"
+                    style="@style/textViewApp"
+                    android:layout_below="@id/tvName"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toEndOf="@id/ivProfilePic"
+                    android:padding="4dp"
+                    android:text="@string/show_profile"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/btnGreen" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvKids"
+            style="@style/textViewApp"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/text_view_round_upper"
+            android:elevation="4dp"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="24dp"
+            android:text="@string/kids"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:drawableEndCompat="@drawable/ic_kids_icon" />
+
+        <TextView
+            android:id="@+id/tvUsedHours"
+            style="@style/textViewApp"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/text_view_stroke"
+            android:elevation="4dp"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="24dp"
+            android:text="@string/used_hours"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:drawableEndCompat="@drawable/ic_used_hours" />
+
+        <TextView
+            android:id="@+id/tvAddresses"
+            style="@style/textViewApp"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/text_view_stroke"
+            android:elevation="4dp"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="24dp"
+            android:text="@string/addresses"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:drawableEndCompat="@drawable/ic_address_icon" />
+
+        <TextView
+            android:id="@+id/tvCards"
+            style="@style/textViewApp"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/text_view_stroke"
+            android:elevation="4dp"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="24dp"
+            android:text="@string/cards"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:drawableEndCompat="@drawable/ic_cards" />
+
+        <TextView
+            android:id="@+id/tvWorkingHours"
+            style="@style/textViewApp"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/text_view_stroke"
+            android:elevation="4dp"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="24dp"
+            android:text="@string/working_hour"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:drawableEndCompat="@drawable/ic_working_hours" />
+
+        <TextView
+            android:id="@+id/tvEarnings"
+            style="@style/textViewApp"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/text_view_stroke"
+            android:elevation="4dp"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="24dp"
+            android:text="@string/earnings"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:drawableEndCompat="@drawable/ic_earnings" />
+
+        <TextView
+            android:id="@+id/tvLinkedBankAccount"
+            style="@style/textViewApp"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/text_view_stroke"
+            android:elevation="4dp"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="24dp"
+            android:text="@string/linked_bank_acc"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:drawableEndCompat="@drawable/ic_linked_bank_account" />
+
+        <TextView
+            android:id="@+id/tvChangePassword"
+            style="@style/textViewApp"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/text_view_stroke"
+            android:elevation="4dp"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="24dp"
+            android:text="@string/change_password"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:drawableEndCompat="@drawable/ic_change_password" />
+
+        <TextView
+            android:id="@+id/tvContactUs"
+            style="@style/textViewApp"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/text_view_stroke"
+            android:elevation="4dp"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="24dp"
+            android:text="@string/contact_us"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:drawableEndCompat="@drawable/ic_contact_us" />
+
+        <TextView
+            android:id="@+id/tvFaq"
+            style="@style/textViewApp"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/text_view_stroke"
+            android:elevation="4dp"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="24dp"
+            android:text="@string/faqs"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <TextView
+            android:id="@+id/tvLogOut"
+            style="@style/textViewApp"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/text_view_round_lower"
+            android:elevation="4dp"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="24dp"
+            android:text="@string/log_out"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:drawableEndCompat="@drawable/ic_logout_icon" />
+
+    </LinearLayout>
+
+</ScrollView>

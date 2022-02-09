@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appBackgroundColor"
+    android:fitsSystemWindows="true">
+
+    <include
+        android:id="@+id/includedToolbar"
+        layout="@layout/common_toolbar" />
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        android:scaleX="1.05"
+        android:theme="@style/calenderView"
+        android:weekSeparatorLineColor="@color/defaultRed"
+        app:layout_constraintEnd_toEndOf="@id/endGuideline"
+        app:layout_constraintStart_toStartOf="@id/startGuideline"
+        app:layout_constraintTop_toBottomOf="@id/includedToolbar" />
+
+    <Button
+        android:id="@+id/btnConfirmAndSelect"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/buttonSize"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/red_button_shape_right"
+        android:fontFamily="@font/proxima_nova_medium"
+        android:text="@string/confirm_select"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="@id/endGuideline"
+        app:layout_constraintStart_toStartOf="@id/startGuideline"
+        app:layout_constraintTop_toBottomOf="@id/calendarView" />
+
+    <ImageView
+        android:id="@+id/ivInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_info"
+        app:layout_constraintStart_toStartOf="@id/startGuideline"
+        app:layout_constraintTop_toBottomOf="@id/btnConfirmAndSelect" />
+
+    <TextView
+        style="@style/textViewApp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/proxima_nova_regular"
+        android:gravity="top"
+        android:text="@string/info_text"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        android:textColor="@color/oftenTextColorsTwo"
+        app:layout_constraintStart_toEndOf="@id/ivInfo"
+        app:layout_constraintTop_toBottomOf="@id/btnConfirmAndSelect" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/startGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.04" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/endGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.96" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

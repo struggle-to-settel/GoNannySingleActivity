@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="@color/appBackgroundColor"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+            <ImageView
+                android:id="@+id/ivNanny"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/image_three"
+                app:layout_collapseMode="parallax" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:scaleType="centerInside"
+                app:layout_collapseMode="pin"
+                app:titleTextAppearance="@style/toolbarTextFonts">
+
+                <ImageView
+                    android:id="@+id/ivBack"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:scaleType="center"
+                    android:background="@drawable/curved_button"
+                    android:backgroundTint="@color/appBackgroundColor"
+                    android:src="@drawable/ic_back"
+                    android:layout_gravity="start|center_vertical"
+                    />
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-12dp"
+        android:background="@drawable/curved_layout"
+        android:backgroundTint="@color/appBackgroundColor"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvNannyName"
+                style="@style/textViewApp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/proxima_nova_semi_bold"
+                android:text="@string/eliana_d_cruz"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvNannyPrice"
+                style="@style/textViewApp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/proxima_nova_semi_bold"
+                android:text="@string/_105"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:textColor="@color/defaultRed"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvTotalFare"
+                style="@style/textViewApp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/total_fare"
+                android:textColor="@color/oftenTextColorsTwo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvNannyPrice" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:isIndicator="true"
+                android:progressTint="@color/yellowIconColor"
+                android:rating="4.5"
+                android:secondaryProgressTint="@android:color/darker_gray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvNannyName" />
+
+            <TextView
+                android:id="@+id/tvRatingCount"
+                style="@style/textViewApp"
+                android:layout_marginStart="8dp"
+                android:gravity="bottom"
+                android:paddingTop="4dp"
+                android:text="4.5"
+                android:textColor="@color/yellowIconColor"
+                app:layout_constraintBottom_toBottomOf="@id/ratingBar"
+                app:layout_constraintStart_toEndOf="@id/ratingBar"
+                app:layout_constraintTop_toTopOf="@id/ratingBar" />
+
+            <TextView
+                android:id="@+id/tvAbout"
+                style="@style/textViewApp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/about"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ratingBar" />
+
+            <TextView
+                android:id="@+id/tvValueAbout"
+                style="@style/textViewApp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:text="@string/about_read_more"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:textColor="@color/oftenTextColorsTwo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAbout" />
+
+            <View
+                android:id="@+id/viewBorder"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/verticalBar"
+                app:layout_constraintTop_toBottomOf="@id/tvValueAbout" />
+
+            <TextView
+                android:id="@+id/tvBookingDetails"
+                style="@style/textViewApp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/booking_details"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/viewBorder" />
+
+            <TextView
+                android:id="@+id/tvPending"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/curved_button"
+                android:fontFamily="@font/proxima_nova_medium"
+                android:padding="4dp"
+                android:text="@string/pending"
+                android:textAllCaps="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textColor="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/viewBorder" />
+
+            <TextView
+                android:id="@+id/tvNeededTimeDate"
+                style="@style/textViewApp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/needed_date_time"
+                android:textColor="@color/oftenTextColorsTwo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvBookingDetails" />
+
+            <TextView
+                android:id="@+id/tvDuration"
+                style="@style/textViewApp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/duration"
+                android:textColor="@color/oftenTextColorsTwo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvBookingDetails" />
+
+            <TextView
+                android:id="@+id/tvValueNeededTimeDate"
+                style="@style/textViewApp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="6dp"
+                android:text="@string/_16_feb_2021_02_00pm"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvNeededTimeDate" />
+
+            <TextView
+                android:id="@+id/tvValueDuration"
+                style="@style/textViewApp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/_7pm_to_7am"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDuration" />
+
+            <TextView
+                android:id="@+id/tvKids"
+                style="@style/textViewApp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/kids"
+                android:textColor="@color/oftenTextColorsTwo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvValueNeededTimeDate" />
+
+            <TextView
+                android:id="@+id/tvValueKids"
+                style="@style/textViewApp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="6dp"
+                android:text="@string/_2_kid_s"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvKids" />
+
+            <TextView
+                android:id="@+id/tvHouseNumber"
+                style="@style/textViewApp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/house_flat_block_no"
+                android:textColor="@color/oftenTextColorsTwo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvValueKids" />
+
+
+            <TextView
+                android:id="@+id/tvValueHouseNumber"
+                style="@style/textViewApp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="6dp"
+                tools:text="12"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvHouseNumber" />
+
+
+            <TextView
+                android:id="@+id/tvAddress"
+                style="@style/textViewApp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/_address"
+                android:textColor="@color/oftenTextColorsTwo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvValueHouseNumber" />
+
+            <TextView
+                android:id="@+id/tvValueAddress"
+                style="@style/textViewApp"
+                android:layout_width="0dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="6dp"
+                android:text="@string/address"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAddress" />
+
+            <View
+                android:id="@+id/viewBorderTwo"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/verticalBar"
+                app:layout_constraintTop_toBottomOf="@id/tvValueAddress" />
+
+            <View
+                android:id="@+id/viewTimeLeft"
+                android:layout_width="match_parent"
+                android:layout_height="92dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="@color/time_remaining_color_booking"
+                android:background="@drawable/code_background_stroke"
+                app:layout_constraintTop_toBottomOf="@id/viewBorderTwo"
+                />
+
+            <TextView
+                android:id="@+id/tvTimeLeft"
+                style="@style/textViewApp"
+                android:fontFamily="@font/proxima_nova_medium"
+                tools:text="28:58:08 hrs"
+                android:textAlignment="center"
+                android:textColor="@color/sky_color_one"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+                app:layout_constraintBottom_toTopOf="@id/tvTimeLeftHelper"
+                app:layout_constraintStart_toStartOf="@id/viewTimeLeft"
+                app:layout_constraintEnd_toEndOf="@id/viewTimeLeft"
+                app:layout_constraintTop_toTopOf="@id/viewTimeLeft"/>
+
+            <TextView
+                style="@style/textViewApp"
+                android:id="@+id/tvTimeLeftHelper"
+                android:text="@string/total_service_time"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                app:layout_constraintStart_toStartOf="@id/viewTimeLeft"
+                app:layout_constraintEnd_toEndOf="@id/viewTimeLeft"
+                app:layout_constraintBottom_toBottomOf="@id/viewTimeLeft"
+                app:layout_constraintTop_toBottomOf="@id/tvTimeLeft"
+                />
+
+            <androidx.constraintlayout.widget.Group
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/groupViewTimeLeft"
+                android:visibility="visible"
+                app:constraint_referenced_ids="tvTimeLeftHelper,tvTimeLeft,viewTimeLeft"/>
+
+
+            <androidx.constraintlayout.widget.Group
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/groupViewCode"
+                app:constraint_referenced_ids="viewCodeBackground,tvCode,tvCodeHelper"
+                />
+
+            <View
+                android:id="@+id/viewCodeBackground"
+                android:layout_width="match_parent"
+                android:layout_height="92dp"
+                android:visibility="visible"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/code_background_stroke"
+                app:layout_constraintTop_toBottomOf="@id/viewTimeLeft" />
+
+            <TextView
+                android:id="@+id/tvCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/proxima_nova_medium"
+                android:letterSpacing="0.8"
+                android:text="@string/_984851"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+                android:textColor="@color/btnGreen"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/viewCodeBackground" />
+
+            <TextView
+                android:id="@+id/tvCodeHelper"
+                style="@style/textViewApp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/your_booking_verification_code"
+                app:layout_constraintBottom_toBottomOf="@id/viewCodeBackground"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvCode" />
+
+            <Button
+                android:id="@+id/btnCancelBooking"
+                style="@style/buttonStyle"
+                android:layout_width="0dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/red_button_shape_right"
+                android:text="@string/cancel_booking"
+                android:textColor="@android:color/white"
+                android:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@+id/btnChatNanny"
+                app:layout_constraintEnd_toStartOf="@id/btnNannyProfile"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/viewCodeBackground"
+                app:layout_goneMarginBottom="20dp" />
+
+            <Button
+                android:id="@+id/btnNannyProfile"
+                style="@style/buttonStyle"
+                android:layout_width="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/sky_blue_button_shape_right"
+                android:text="@string/nanny_profile"
+                android:textColor="@android:color/white"
+                app:layout_constraintEnd_toStartOf="@id/btnRateNanny"
+                app:layout_constraintStart_toEndOf="@id/btnCancelBooking"
+                app:layout_constraintTop_toBottomOf="@id/viewCodeBackground"
+                app:layout_constraintBottom_toTopOf="@id/btnChatNanny"
+                app:layout_goneMarginBottom="20dp"
+                app:layout_goneMarginStart="16dp" />
+
+            <Button
+                android:id="@+id/btnRateNanny"
+                style="@style/buttonStyle"
+                android:layout_width="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/yellow_button_shape"
+                android:text="@string/rate_to_nanny"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btnNannyProfile"
+                app:layout_constraintTop_toBottomOf="@id/viewCodeBackground" />
+
+            <Button
+                android:id="@+id/btnChatNanny"
+                style="@style/buttonStyle"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/blue_button_shape_right"
+                android:text="@string/chat"
+                android:textColor="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnNannyProfile"
+                app:layout_goneMarginBottom="20dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

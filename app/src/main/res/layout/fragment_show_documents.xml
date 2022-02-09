@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/common_toolbar"
+        android:id="@+id/includedToolbar"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rvShowDocuments"
+        android:layout_marginHorizontal="16dp"
+        android:layout_below="@id/includedToolbar"
+        android:layout_marginTop="16dp"
+        />
+
+</RelativeLayout>

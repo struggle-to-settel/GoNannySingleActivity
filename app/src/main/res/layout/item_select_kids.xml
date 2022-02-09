@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    app:cardCornerRadius="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:paddingVertical="16dp"
+            android:paddingHorizontal="20dp"
+            android:src="@drawable/ic_child_bg"
+            app:layout_constraintBottom_toTopOf="@id/btnSelectKids"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTitleName"
+            style="@style/textViewApp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/name"
+            android:textAllCaps="true"
+            android:textColor="@color/oftenTextColorsTwo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvValueName"
+            style="@style/textViewApp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/peter_lee"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitleName" />
+
+        <TextView
+            android:id="@+id/tvTitleAllergies"
+            style="@style/textViewApp"
+            android:layout_marginStart="209dp"
+            android:layout_marginTop="20dp"
+            android:gravity="end"
+            android:text="@string/allergies"
+            android:textAllCaps="true"
+            android:textColor="@color/oftenTextColorsTwo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvValueAllergies"
+            style="@style/textViewApp"
+            android:layout_marginStart="209dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/no"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitleAllergies" />
+
+        <TextView
+            android:id="@+id/tvTitleBehaviour"
+            style="@style/textViewApp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/hourly_behaviour"
+            android:textAllCaps="true"
+            android:textColor="@color/oftenTextColorsTwo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvValueName" />
+
+        <TextView
+            android:id="@+id/tvValueKids"
+            style="@style/textViewApp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/food_time"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitleBehaviour" />
+
+        <TextView
+            android:id="@+id/tvTitleIndoorCamera"
+            style="@style/textViewApp"
+            android:layout_marginStart="209dp"
+            android:layout_marginTop="16dp"
+            android:gravity="end"
+            android:text="@string/indoor_camera"
+            android:textAllCaps="true"
+            android:textColor="@color/oftenTextColorsTwo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvValueAllergies" />
+
+        <TextView
+            android:id="@+id/tvValueHouseNumber"
+            style="@style/textViewApp"
+            android:layout_marginStart="209dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/yes"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitleIndoorCamera" />
+
+        <Button
+            android:id="@+id/btnSelectKids"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/btnGreen"
+            android:text="@string/select"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvValueKids" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

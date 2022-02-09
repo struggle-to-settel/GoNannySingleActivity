@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/includedToolbar"
+        layout="@layout/common_toolbar" />
+
+    <ImageView
+        android:id="@+id/ivProfile"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/includedToolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/round_image" />
+
+    <TextView
+        android:id="@+id/tvProfile"
+        style="@style/textViewApp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/includedToolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+    <TextView
+        android:id="@+id/tvFirstName"
+        style="@style/textViewApp"
+        android:layout_below="@id/ivProfile"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/proxima_nova_regular"
+        android:textColor="@color/oftenTextColorsTwo"
+        tools:text="First Name" />
+
+    <EditText
+        android:id="@+id/etFirstName"
+        style="@style/editTextApp"
+        android:layout_below="@id/tvFirstName"
+        android:layout_marginHorizontal="16dp"
+        android:background="@android:color/transparent"
+        android:inputType="textPersonName" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/etFirstName"
+        android:layout_marginHorizontal="16dp"
+        android:background="@color/verticalBar" />
+
+    <TextView
+        android:id="@+id/tvLastName"
+        style="@style/textViewApp"
+        android:layout_below="@id/etFirstName"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/proxima_nova_regular"
+        android:text="Last Name"
+        android:textColor="@color/oftenTextColorsTwo" />
+
+    <EditText
+        android:id="@+id/etLastName"
+        style="@style/editTextApp"
+        android:layout_below="@id/tvLastName"
+        android:layout_marginHorizontal="16dp"
+        android:background="@android:color/transparent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/etLastName"
+        android:layout_marginHorizontal="16dp"
+        android:background="@color/verticalBar" />
+
+    <TextView
+        android:id="@+id/tvEmail"
+        style="@style/textViewApp"
+        android:layout_below="@id/etLastName"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/proxima_nova_regular"
+        android:text="Email"
+        android:textColor="@color/oftenTextColorsTwo" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        style="@style/editTextApp"
+        android:layout_below="@id/tvEmail"
+        android:layout_marginHorizontal="16dp"
+        android:background="@android:color/transparent"
+        android:inputType="textEmailAddress" />
+
+    <View
+        android:id="@+id/viewEmail"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/etEmail"
+        android:layout_marginHorizontal="16dp"
+        android:background="@color/verticalBar" />
+
+    <TextView
+        android:id="@+id/tvPhoneNumber"
+        style="@style/textViewApp"
+        android:layout_below="@id/etEmail"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/proxima_nova_regular"
+        android:text="@string/phone_number"
+        android:textColor="@color/oftenTextColorsTwo" />
+
+    <com.hbb20.CountryCodePicker
+        android:id="@+id/ccpPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_below="@id/tvPhoneNumber"
+        android:layout_alignStart="@id/tvPhoneNumber"
+        app:ccp_showArrow="false"
+        app:ccp_showFlag="false"
+        app:ccp_showNameCode="false" />
+
+    <EditText
+        android:id="@+id/etPhoneNumber"
+        style="@style/editTextApp"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/tvPhoneNumber"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:layout_toEndOf="@id/ccpPhone"
+        android:background="@android:color/transparent"
+        android:inputType="phone"
+        android:paddingHorizontal="8dp" />
+
+    <View
+        android:id="@+id/viewPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/etPhoneNumber"
+        android:layout_marginHorizontal="16dp"
+        android:background="@color/verticalBar" />
+
+</RelativeLayout>
